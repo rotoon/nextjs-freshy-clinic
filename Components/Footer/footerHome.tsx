@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 import { FaEnvelope, FaFacebookSquare, FaLine } from 'react-icons/fa'
-import { ImPhone } from 'react-icons/im'
+import { ImLocation, ImPhone } from 'react-icons/im'
 import Link from 'next/link'
 import './footer.css'
 
@@ -18,7 +18,7 @@ function FooterHome() {
   return (
     <Box
       w='100%'
-      bg='#B329FE'
+      bg='#b06dff'
       py={{ base: '2rem', sm: '2rem', md: '3rem' }}
     >
       <VStack
@@ -29,7 +29,7 @@ function FooterHome() {
         justifyContent='start'
         alignItems={{ base: 'center', sm: 'center', md: 'center' }}
       >
-        <Flex
+        {/* <Flex
           pt='1rem'
           position='absolute'
           right={{
@@ -93,7 +93,7 @@ function FooterHome() {
               <Text mt='-0.25rem'>TOP</Text>
             </Center>
           </VStack>
-        </Flex>
+        </Flex> */}
         <HStack
           w={{
             base: '100%',
@@ -104,15 +104,13 @@ function FooterHome() {
             '2xl': '75rem',
           }}
           color='#fff'
-          // justifyContent='space-between'
-          alignItems={{ base: 'center', sm: 'center', md: 'flex-start' }}
-          spacing={{ base: '0rem', sm: '0rem', md: '0.5rem', lg: '0.5rem' }}
+          alignItems={{ base: 'flex-start', sm: 'center', md: 'flex-start' }}
           flexDirection={['column', 'column', 'row', 'row', 'row', 'row']}
         >
           <VStack
-            alignItems={{ base: 'center', sm: 'center', md: 'flex-start' }}
-            w={{ base: '100%', sm: '100%', md: '100%', lg: '50%' }}
-            spacing={{ base: '0.25rem', sm: '0.25rem', md: '0.75rem' }}
+            alignItems={{ base: 'flex-start' }}
+            w='100%'
+            spacing={{ base: '0.75rem', sm: '0.75rem', md: '0.75rem' }}
           >
             <Image
               alt='logo'
@@ -122,18 +120,71 @@ function FooterHome() {
               w='auto'
               borderRadius={10}
             />
-            <Box>
+            <Text
+              w={{ base: '100%', sm: '100%', md: '20rem', lg: '18rem' }}
+              lineHeight='20px'
+              fontFamily='LINESeedSansTH-Rg'
+            >
+              คลินิกเสริมความงามอย่างครบวงจร ศัลยกรรม หัตการ
+              ทรีทเม้นท์ต่างๆให้เราดูแลนะคะ
+            </Text>
+          </VStack>
+
+          <VStack
+            mt='1rem'
+            spacing={{
+              base: '0.25rem',
+              sm: '0.25rem',
+              md: '0.25rem',
+              lg: '1rem',
+            }}
+            alignItems='flex-start'
+            w='100%'
+            fontFamily='LINESeedSansTH-Rg'
+          >
+            <Text fontWeight='bold'>เมนู</Text>
+            <Text
+              cursor='pointer'
+              className='hover-underline-footer'
+              as={Link}
+              href='/about'
+            >
+              เกี่ยวกับเรา
+            </Text>
+            <Text
+              cursor='pointer'
+              className='hover-underline-footer'
+              as={Link}
+              href='/about'
+            >
+              บริการของเรา
+            </Text>
+          </VStack>
+          <VStack
+            mt='1rem'
+            spacing={{
+              base: '0.25rem',
+              sm: '0.25rem',
+              md: '0.25rem',
+              lg: '1rem',
+            }}
+            alignItems='flex-start'
+            w='100%'
+            fontFamily='LINESeedSansTH-Rg'
+          >
+            <Text fontWeight='bold'>ติดต่อเรา</Text>
+            <HStack alignItems='start'>
+              <Text mt='0.15rem'>
+                <ImLocation />
+              </Text>
               <Text
-                w={{ base: '19rem', sm: '19rem', md: '20rem', lg: '15rem' }}
-                textAlign={{ base: 'center', sm: 'center', md: 'start' }}
                 lineHeight='20px'
                 fontFamily='LINESeedSansTH-Rg'
-                px={{ base: '2rem', sm: '2rem', md: '0rem' }}
               >
                 76/2 ถ.หมื่นด้ามพร้าคต ต.ช้างเผือก อ.เมือง จ.เชียงใหม่,
                 เชียงใหม่, ประเทศไทย, 50300
               </Text>
-            </Box>
+            </HStack>
             <HStack>
               <Text>
                 <FaEnvelope />
@@ -169,52 +220,8 @@ function FooterHome() {
               </VStack>
             </HStack>
           </VStack>
-
-          <VStack
-            mt='1rem'
-            spacing={{
-              base: '0.25rem',
-              sm: '0.25rem',
-              md: '0.25rem',
-              lg: '1rem',
-            }}
-            alignItems='flex-start'
-            w={{
-              base: '-webkit-fill-available',
-              sm: '-webkit-fill-available',
-              md: '-webkit-fill-available',
-              lg: '50%',
-            }}
-            fontFamily='LINESeedSansTH-Rg'
-          >
-            <Text fontWeight='bold'>เมนู</Text>
-            <Text
-              cursor='pointer'
-              className='hover-underline-footer'
-              as={Link}
-              href='/about'
-            >
-              เกี่ยวกับเรา
-            </Text>
-            <Text
-              cursor='pointer'
-              className='hover-underline-footer'
-              as={Link}
-              href='/about'
-            >
-              บริการของเรา
-            </Text>
-            <Text
-              cursor='pointer'
-              className='hover-underline-footer'
-              as={Link}
-              href='/contact'
-            >
-              ติดต่อเรา
-            </Text>
-            <Text> </Text>
-          </VStack>
         </HStack>
+
         <Flex
           borderTop='1px solid #fff'
           w={{ base: '100%', sm: '100%', md: '90%', lg: '90%', xl: '75rem' }}

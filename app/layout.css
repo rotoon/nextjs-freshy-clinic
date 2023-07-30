@@ -59,19 +59,18 @@ body {
   box-shadow: inset 1px 0 0 #dcdcdc, inset -1px 0 0 #eeeeee;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #b329fe;
+  background-color: #b06dff;
   background-clip: padding-box;
   border: solid transparent;
   border-width: 0px 0px 0px 0px;
-  border-radius: 10px;
   min-height: 20px;
   height: '12px';
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #b329fe;
+  background-color: #b06dff;
 }
 ::-webkit-scrollbar-thumb:active {
-  background-color: #b329fe;
+  background-color: #b06dff;
 }
 
 .header {

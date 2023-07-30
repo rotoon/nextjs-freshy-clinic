@@ -52,7 +52,7 @@ function Hamburger({}: Props) {
       alignItems='center'
       justifyContent='space-between'
       w='100%'
-      bg='#B329FE'
+      bg='#b06dff'
       transition='all 0.4s'
       h={`${navSize}`}
       zIndex='banner'
@@ -124,7 +124,7 @@ function Hamburger({}: Props) {
               py='1.5rem'
               fontFamily='Oswald-VariableFont-wght'
               fontSize='30px'
-              bg='#B329FE'
+              bg='#b06dff'
               color='#fff'
             >
               The freshy clinic

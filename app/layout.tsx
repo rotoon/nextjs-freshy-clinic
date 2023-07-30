@@ -4,7 +4,6 @@
 import { Providers } from './providers'
 import { Header, Hamburger, FooterHome } from '@/Components'
 import { Box } from '@chakra-ui/react'
-import './layout.css'
 export default function RootLayout({
   children,
 }: {

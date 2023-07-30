@@ -32,12 +32,12 @@ function Header({}: Props) {
     pathName === '/contact' ? 'scaleX(1)' : 'scaleX(0)'
 
   const [navSize, setnavSize] = useState<String>('5.5rem')
-  const [navColor, setnavColor] = useState<String>('#B329FE')
+  const [navColor, setnavColor] = useState<String>('#b06dff')
   const [navImage, setnavImage] = useState<String>('3.75rem')
   const [navFont, setnavFont] = useState<String>('19px')
   const [navFontResponsive, setnavFontResponsive] = useState<String>('18px')
   const listenScrollEvent = () => {
-    window.scrollY > 10 ? setnavColor('#B329FE') : setnavColor('transparent')
+    window.scrollY > 10 ? setnavColor('#b06dff') : setnavColor('transparent')
     window.scrollY > 10 ? setnavSize('4.5rem') : setnavSize('5.5rem')
     window.scrollY > 10 ? setnavImage('3.25rem') : setnavImage('3.75rem')
     window.scrollY > 10 ? setnavFont('17px') : setnavFont('19px')
