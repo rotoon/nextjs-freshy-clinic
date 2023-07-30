@@ -1,0 +1,118 @@
+html,
+body {
+  scroll-behavior: smooth !important;
+  overflow-x: hidden;
+  padding: 0px !important;
+  margin: 0px !important;
+  font-family: 'LINESeedSans-Rg';
+  font-family: 'LINESeedSansTH-Rg';
+  font-family: 'Oswald-VariableFont-wght';
+  font-family: 'Urbanist-VariableFont-wght';
+}
+
+@font-face {
+  font-family: 'LINESeedSans-Rg';
+  src: url('/fonts/LINESeedSans_Rg.otf');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LINESeedSansTH-Rg';
+  src: url('/fonts/LINESeedSansTH_Rg.otf');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald-VariableFont-wght';
+  src: url('/fonts/Oswald-VariableFont_wght.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist-VariableFont-wght';
+  src: url('/fonts/Urbanist-VariableFont_wght.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+::-webkit-scrollbar {
+  height: 8px;
+  overflow: visible;
+
+  width: 10px;
+  background: '#E2E2E2';
+}
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+::-webkit-scrollbar-track {
+  background: #e2e2e2;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: #e2e2e2;
+}
+::-webkit-scrollbar-track:active {
+  background-color: #e2e2e2;
+  box-shadow: inset 1px 0 0 #dcdcdc, inset -1px 0 0 #eeeeee;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #b329fe;
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0px 0px 0px 0px;
+  border-radius: 10px;
+  min-height: 20px;
+  height: '12px';
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #b329fe;
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: #b329fe;
+}
+
+.header {
+  display: block;
+  z-index: 999;
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: #fe8800;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.1rem;
+  bottom: 0;
+  left: 0;
+  background-color: #fe8800;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* <----------------------Modal-Layout--------------------------> */
+
+.chakra-ui-light {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+/* <----------------------Modal-Layout--------------------------> */
+
+@media only screen and (max-width: 991px) {
+  .header {
+    display: none;
+  }
+}

@@ -1,0 +1,181 @@
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  z-index: 999;
+}
+
+.header-top {
+  width: 70%;
+}
+
+.textcss {
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+}
+.textcss:after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #fff !important;
+  /* transform: ; */
+  transition: transform 250ms ease-in-out;
+}
+.textcss:active {
+  background: transparent;
+}
+.textcss:hover:after {
+  transform: scaleX(1);
+}
+.textcss.fromRight:after {
+  transform-origin: 100% 50%;
+}
+.textcss.fromLeft:after {
+  transform-origin: 0% 50%;
+}
+
+/* <-------------------------hamburger------------------------> */
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger {
+  margin: 0px;
+  margin-top: 0px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  display: block;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+
+.bar1 {
+  top: 4px;
+}
+
+.bar2,
+.bar3 {
+  top: 13.5px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 0px;
+}
+
+.hamburger4 .bar4 {
+  top: 13.5px;
+}
+
+.hamburger4 .bar5 {
+  bottom: 2px;
+}
+
+.hamburger4 .bar {
+  transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s;
+}
+
+.hamburger4 .bar2 {
+  width: 1px;
+  transform: rotate(90deg);
+  left: 13.5px;
+}
+
+.hamburger4 .bar3 {
+  width: 1px;
+  left: 13.5px;
+}
+
+.checkbox4:checked + label > .hamburger4 > .bar1 {
+  top: 13.5px;
+  background-color: transparent;
+}
+
+.checkbox4:checked + label > .hamburger4 > .bar2 {
+  left: 0px;
+  width: 30px;
+  transform: rotate(45deg);
+}
+
+.checkbox4:checked + label > .hamburger4 > .bar3 {
+  left: 0;
+  width: 30px;
+  transform: rotate(-45deg);
+}
+
+.checkbox4:checked + label > .hamburger4 > .bar4 {
+  background-color: transparent;
+}
+
+.checkbox4:checked + label > .hamburger4 > .bar5 {
+  bottom: 13.5px;
+  background-color: transparent;
+}
+
+/* <-------------------------hamburger------------------------> */
+.textcss {
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+}
+.textcss:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #afafaf;
+  /* transform: ; */
+  transition: transform 250ms ease-in-out;
+}
+.textcss:active {
+  background: transparent;
+}
+.textcss:hover:after {
+  transform: scaleX(1);
+}
+.textcss.fromRight:after {
+  transform-origin: 100% 50%;
+}
+.textcss.fromLeft:after {
+  transform-origin: 0% 50%;
+}
+/* <-------------------------hamburger------------------------> */
+
+@media only screen and (max-width: 1280px) {
+  .header-top {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .header-top {
+    width: 95%;
+  }
+}
