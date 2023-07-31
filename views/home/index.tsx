@@ -1,6 +1,7 @@
 'use client'
 import { Box, Image } from '@chakra-ui/react'
 import Slider from 'react-slick'
+import Layout from '../layout'
 
 const settings = {
   dots: false,
@@ -15,25 +16,27 @@ const settings = {
 
 export default function Home() {
   return (
-    <Box mt={{ base: '4rem', md: '8.5rem' }}>
-      <Box
-        zIndex='banner'
-        display={{ base: 'none', lg: 'block' }}
-      >
-        <Slider {...settings}>
-          <Image src='/slides/desktop/1.jpg' />
-          <Image src='/slides/desktop/2.jpg' />
-        </Slider>
+    <Layout>
+      <Box mt={{ base: '4rem', md: '8.5rem' }}>
+        <Box
+          zIndex='banner'
+          display={{ base: 'none', lg: 'block' }}
+        >
+          <Slider {...settings}>
+            <Image src='/slides/desktop/1.jpg' />
+            <Image src='/slides/desktop/2.jpg' />
+          </Slider>
+        </Box>
+        <Box
+          zIndex='banner'
+          display={{ base: 'block', lg: 'none' }}
+        >
+          <Slider {...settings}>
+            <Image src='/slides/mobile/1.jpg' />
+            <Image src='/slides/mobile/2.jpg' />
+          </Slider>
+        </Box>
       </Box>
-      <Box
-        zIndex='banner'
-        display={{ base: 'block', lg: 'none' }}
-      >
-        <Slider {...settings}>
-          <Image src='/slides/mobile/1.jpg' />
-          <Image src='/slides/mobile/2.jpg' />
-        </Slider>
-      </Box>
-    </Box>
+    </Layout>
   )
 }
