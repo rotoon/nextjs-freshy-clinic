@@ -1,8 +1,8 @@
 'use client'
 import { Box, Image } from '@chakra-ui/react'
 import Slider from 'react-slick'
-import Layout from '../layout'
 import { HomeComponentProps } from '@/app/page'
+import Layout from '@/views/layout'
 
 const settings = {
   dots: false,
@@ -30,6 +30,7 @@ export default function Home({ slides }: HomeComponentProps) {
             <Slider {...settings}>
               {desktop?.map(({ image }, index) => (
                 <Image
+                  alt='slide image'
                   src={image}
                   key={index}
                 />
@@ -45,6 +46,7 @@ export default function Home({ slides }: HomeComponentProps) {
             <Slider {...settings}>
               {mobile?.map(({ image }, index) => (
                 <Image
+                  alt='slide image'
                   src={image}
                   key={index}
                 />

@@ -1,7 +1,9 @@
 const admin = require('firebase-admin')
 const functions = require('firebase-functions')
-const cors = require('cors')
+const { setGlobalOptions } = require('firebase-functions/v2')
+setGlobalOptions({ maxInstances: 10 })
 
+const cors = require('cors')
 admin.initializeApp()
 
 const db = admin.firestore()

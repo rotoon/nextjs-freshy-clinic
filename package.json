@@ -28,7 +28,7 @@
     "firebase": "^9.23.0",
     "firecms": "^2.0.5",
     "framer-motion": "^10.15.0",
-    "next": "13.4.9",
+    "next": "13.4.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
