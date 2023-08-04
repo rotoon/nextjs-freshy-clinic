@@ -1,7 +1,8 @@
 'use client'
 import { Box, Image } from '@chakra-ui/react'
 import Slider from 'react-slick'
-import Layout from '../layout'
+import { HomeComponentProps } from '@/app/page'
+import Layout from '@/views/layout'
 
 const settings = {
   dots: false,
@@ -14,28 +15,45 @@ const settings = {
   autoplaySpeed: 3000,
 }
 
-export default function Home() {
+export default function Home({ slides }: HomeComponentProps) {
+  const mobile = slides?.list.filter((slide) => slide.type === 'mobile') ?? []
+  const desktop = slides?.list.filter((slide) => slide.type === 'desktop') ?? []
+
   return (
     <Layout>
       <Box mt={{ base: '4rem', md: '8.5rem' }}>
-        <Box
-          zIndex='banner'
-          display={{ base: 'none', lg: 'block' }}
-        >
-          <Slider {...settings}>
-            <Image src='/slides/desktop/1.jpg' />
-            <Image src='/slides/desktop/2.jpg' />
-          </Slider>
-        </Box>
-        <Box
-          zIndex='banner'
-          display={{ base: 'block', lg: 'none' }}
-        >
-          <Slider {...settings}>
-            <Image src='/slides/mobile/1.jpg' />
-            <Image src='/slides/mobile/2.jpg' />
-          </Slider>
-        </Box>
+        {desktop?.length > 0 && (
+          <Box
+            zIndex='banner'
+            display={{ base: 'none', lg: 'block' }}
+          >
+            <Slider {...settings}>
+              {desktop?.map(({ image }, index) => (
+                <Image
+                  alt='slide image'
+                  src={image}
+                  key={index}
+                />
+              ))}
+            </Slider>
+          </Box>
+        )}
+        {mobile?.length > 0 && (
+          <Box
+            zIndex='banner'
+            display={{ base: 'block', lg: 'none' }}
+          >
+            <Slider {...settings}>
+              {mobile?.map(({ image }, index) => (
+                <Image
+                  alt='slide image'
+                  src={image}
+                  key={index}
+                />
+              ))}
+            </Slider>
+          </Box>
+        )}
       </Box>
     </Layout>
   )

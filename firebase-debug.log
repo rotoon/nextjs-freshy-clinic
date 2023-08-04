@@ -1,0 +1,416 @@
+[debug] [2023-07-31T08:49:41.603Z] ----------------------------------------------------------------------
+[debug] [2023-07-31T08:49:41.603Z] Command:       /Users/rotoon/.nvm/versions/node/v18.16.1/bin/node /Users/rotoon/.nvm/versions/node/v18.16.1/bin/firebase deploy --only hosting
+[debug] [2023-07-31T08:49:41.604Z] CLI Version:   12.4.4
+[debug] [2023-07-31T08:49:41.604Z] Platform:      darwin
+[debug] [2023-07-31T08:49:41.604Z] Node Version:  v18.16.1
+[debug] [2023-07-31T08:49:41.605Z] Time:          Mon Jul 31 2023 15:49:41 GMT+0700 (Indochina Time)
+[debug] [2023-07-31T08:49:41.605Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-31T08:49:41.641Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-31T08:49:41.641Z] > authorizing via signed-in user (rotoon.np@gmail.com)
+[debug] [2023-07-31T08:49:41.641Z] [iam] checking project nextjs-freshy-clinic for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-31T08:49:41.643Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions [none]
+[debug] [2023-07-31T08:49:41.643Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions x-goog-quota-user=projects/nextjs-freshy-clinic
+[debug] [2023-07-31T08:49:41.643Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-31T08:49:42.800Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions 200
+[debug] [2023-07-31T08:49:42.800Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-31T08:49:42.801Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic [none]
+[debug] [2023-07-31T08:49:43.280Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic 200
+[debug] [2023-07-31T08:49:43.280Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic {"projectId":"nextjs-freshy-clinic","projectNumber":"740275685973","displayName":"nextjs-freshy-clinic","name":"projects/nextjs-freshy-clinic","resources":{"hostingSite":"nextjs-freshy-clinic","storageBucket":"nextjs-freshy-clinic.appspot.com","locationId":"asia-southeast1"},"state":"ACTIVE","etag":"1_8c432138-c4de-48a1-b644-df8d33ac4de7"}
+[debug] [2023-07-31T08:49:44.452Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/sites pageToken=&pageSize=10
+[debug] [2023-07-31T08:49:45.228Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/sites 200
+[debug] [2023-07-31T08:49:45.229Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/sites {"sites":[{"name":"projects/nextjs-freshy-clinic/sites/nextjs-freshy-clinic","defaultUrl":"https://nextjs-freshy-clinic.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-07-31T08:49:45.229Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/sites 
+[debug] [2023-07-31T08:49:45.978Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/sites 200
+[debug] [2023-07-31T08:49:45.978Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/sites {"sites":[{"name":"projects/nextjs-freshy-clinic/sites/nextjs-freshy-clinic","defaultUrl":"https://nextjs-freshy-clinic.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-07-31T08:49:45.979Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/webApps/-/config [none]
+[debug] [2023-07-31T08:49:47.366Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/webApps/-/config 200
+[debug] [2023-07-31T08:49:47.366Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/webApps/-/config {"projectId":"nextjs-freshy-clinic","appId":"1:740275685973:web:9181e21df74505e96562dc","storageBucket":"nextjs-freshy-clinic.appspot.com","locationId":"asia-southeast1","apiKey":"AIzaSyC-cR3FCfs_EQwdPcfH-GEUn-k1UB-7e-s","authDomain":"nextjs-freshy-clinic.firebaseapp.com","messagingSenderId":"740275685973","measurementId":"G-MCQ7X29X6Q"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] - info Creating an optimized production build...
+
+[info] - info Compiled successfully
+
+[info] - info Linting and checking validity of types...
+
+[info] - info Collecting page data...
+
+[info] - info Generating static pages (0/3)
+
+[info] - info Generating static pages (3/3)
+
+[info] - info Finalizing page optimization...
+
+[info] 
+
+[info] Route (app)                                Size     First Load JS
+┌ λ /                                      0 B                0 B
+└ λ /admin/[[...any]]                      1.39 MB        1.49 MB
++ First Load JS shared by all              84.8 kB
+  ├ chunks/769-eaee04808a31e798.js         25.4 kB
+  ├ chunks/976-81a6eee27c9e3453.js         6.72 kB
+  ├ chunks/bce60fc1-4ee71b4162d81c2a.js    50.5 kB
+  ├ chunks/main-app-5d16ec619a50084f.js    228 B
+  └ chunks/webpack-5ecea00d70273af7.js     1.86 kB
+
+Route (pages)                              Size     First Load JS
+─ ○ /404                                   184 B          75.2 kB
++ First Load JS shared by all              75 kB
+  ├ chunks/framework-b72ae755b855c85c.js   45.1 kB
+  ├ chunks/main-a12dfcd4da806213.js        27.9 kB
+  ├ chunks/pages/_app-e523d30b4fa33999.js  202 B
+  └ chunks/webpack-5ecea00d70273af7.js     1.86 kB
+
+[info] 
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • non-static component /page
+[info]  • non-static component /admin/[[...any]]/page
+[info] 
+[debug] [2023-07-31T08:52:52.591Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "asia-east1"
+      },
+      "site": "nextjs-freshy-clinic",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": {
+            "functionId": "ssrnextjsfreshyclinic",
+            "region": "asia-east1",
+            "pinTag": true
+          }
+        }
+      ],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "**/*.[jt]s",
+          "headers": [
+            {
+              "key": "Set-Cookie",
+              "value": "__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoibmV4dGpzLWZyZXNoeS1jbGluaWMiLCJhcHBJZCI6IjE6NzQwMjc1Njg1OTczOndlYjo5MTgxZTIxZGY3NDUwNWU5NjU2MmRjIiwic3RvcmFnZUJ1Y2tldCI6Im5leHRqcy1mcmVzaHktY2xpbmljLmFwcHNwb3QuY29tIiwibG9jYXRpb25JZCI6ImFzaWEtc291dGhlYXN0MSIsImFwaUtleSI6IkFJemFTeUMtY1IzRkNmc19FUXdkUGNmSC1HRVVuLWsxVUItN2UtcyIsImF1dGhEb21haW4iOiJuZXh0anMtZnJlc2h5LWNsaW5pYy5maXJlYmFzZWFwcC5jb20iLCJtZXNzYWdpbmdTZW5kZXJJZCI6Ijc0MDI3NTY4NTk3MyIsIm1lYXN1cmVtZW50SWQiOiJHLU1DUTdYMjlYNlEifSwiX2F1dGhUb2tlblN5bmNVUkwiOiIvX19zZXNzaW9uIn0; SameSite=Strict; Expires=2025-06-24T19:32:52.591Z; Path=/;"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase/nextjs-freshy-clinic/hosting",
+      "webFramework": "next_ssr"
+    }
+  ],
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ]
+    },
+    {
+      "source": ".firebase/nextjs-freshy-clinic/functions",
+      "codebase": "firebase-frameworks-nextjs-freshy-clinic"
+    }
+  ]
+}
+[debug] [2023-07-31T08:52:52.592Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-31T08:52:52.592Z] > authorizing via signed-in user (rotoon.np@gmail.com)
+[debug] [2023-07-31T08:52:52.592Z] [iam] checking project nextjs-freshy-clinic for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-07-31T08:52:52.592Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions [none]
+[debug] [2023-07-31T08:52:52.592Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions x-goog-quota-user=projects/nextjs-freshy-clinic
+[debug] [2023-07-31T08:52:52.592Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-07-31T08:52:53.732Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions 200
+[debug] [2023-07-31T08:52:53.733Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-07-31T08:52:53.734Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/nextjs-freshy-clinic/locations/-/functions [none]
+[debug] [2023-07-31T08:52:54.298Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/nextjs-freshy-clinic/locations/-/functions 200
+[debug] [2023-07-31T08:52:54.299Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/nextjs-freshy-clinic/locations/-/functions {"functions":[{"name":"projects/nextjs-freshy-clinic/locations/asia-southeast1/functions/slide","httpsTrigger":{"url":"https://asia-southeast1-nextjs-freshy-clinic.cloudfunctions.net/slide","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"slide","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"nextjs-freshy-clinic@appspot.gserviceaccount.com","updateTime":"2023-07-31T08:49:15.446Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"77471fb5737a4ca2360a626a39e2f1093e49f4fe"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-337630410142.asia-southeast1.cloudfunctions.appspot.com/cb1c7021-2128-435f-8bb8-1500505ba4d5.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"nextjs-freshy-clinic\",\"storageBucket\":\"nextjs-freshy-clinic.appspot.com\",\"locationId\":\"asia-southeast1\"}","GCLOUD_PROJECT":"nextjs-freshy-clinic","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-freshy-clinic/locations/asia-southeast1/functions/slide"},"runtime":"nodejs18","ingressSettings":"ALLOW_ALL","buildId":"8ce60a0f-7196-4924-ba4c-101ce40265b4","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/740275685973/locations/asia-southeast1/builds/8ce60a0f-7196-4924-ba4c-101ce40265b4","dockerRegistry":"ARTIFACT_REGISTRY"}]}
+[debug] [2023-07-31T08:52:54.301Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/nextjs-freshy-clinic/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-07-31T08:52:56.000Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/nextjs-freshy-clinic/locations/-/functions 200
+[debug] [2023-07-31T08:52:56.000Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/nextjs-freshy-clinic/locations/-/functions {}
+[info] i  hosting: The following function(s) are pinned to site nextjs-freshy-clinic and will be deployed as well: ssrnextjsfreshyclinic 
+[info] 
+[info] === Deploying to 'nextjs-freshy-clinic'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2023-07-31T08:52:56.006Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic [none]
+[debug] [2023-07-31T08:52:56.712Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic 200
+[debug] [2023-07-31T08:52:56.712Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic {"projectId":"nextjs-freshy-clinic","projectNumber":"740275685973","displayName":"nextjs-freshy-clinic","name":"projects/nextjs-freshy-clinic","resources":{"hostingSite":"nextjs-freshy-clinic","storageBucket":"nextjs-freshy-clinic.appspot.com","locationId":"asia-southeast1"},"state":"ACTIVE","etag":"1_8c432138-c4de-48a1-b644-df8d33ac4de7"}
+[info] i  functions: preparing codebase firebase-frameworks-nextjs-freshy-clinic for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-07-31T08:52:56.719Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-07-31T08:52:56.719Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/nextjs-freshy-clinic
+[debug] [2023-07-31T08:52:56.721Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-07-31T08:52:56.721Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/nextjs-freshy-clinic
+[debug] [2023-07-31T08:52:56.725Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/cloudbuild.googleapis.com [none]
+[debug] [2023-07-31T08:52:56.725Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/cloudbuild.googleapis.com x-goog-quota-user=projects/nextjs-freshy-clinic
+[debug] [2023-07-31T08:52:56.728Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/artifactregistry.googleapis.com [none]
+[debug] [2023-07-31T08:52:56.728Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/artifactregistry.googleapis.com x-goog-quota-user=projects/nextjs-freshy-clinic
+[debug] [2023-07-31T08:52:58.190Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/cloudfunctions.googleapis.com 200
+[debug] [2023-07-31T08:52:58.190Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-07-31T08:52:58.208Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/cloudbuild.googleapis.com 200
+[debug] [2023-07-31T08:52:58.208Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-07-31T08:52:58.214Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/runtimeconfig.googleapis.com 200
+[debug] [2023-07-31T08:52:58.215Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-07-31T08:52:58.232Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/artifactregistry.googleapis.com 200
+[debug] [2023-07-31T08:52:58.232Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-07-31T08:52:58.233Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/adminSdkConfig [none]
+[debug] [2023-07-31T08:52:58.679Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/adminSdkConfig 200
+[debug] [2023-07-31T08:52:58.679Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/adminSdkConfig {"projectId":"nextjs-freshy-clinic","storageBucket":"nextjs-freshy-clinic.appspot.com","locationId":"asia-southeast1"}
+[debug] [2023-07-31T08:52:58.686Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/configs [none]
+[debug] [2023-07-31T08:52:59.205Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/configs 200
+[debug] [2023-07-31T08:52:59.206Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nextjs-freshy-clinic/configs {}
+[debug] [2023-07-31T08:52:59.215Z] Validating nodejs source
+[debug] [2023-07-31T08:52:59.726Z] > [functions] package.json contents: {
+  "name": "nextjs-freshy-clinic",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/icons": "^2.1.0",
+    "@chakra-ui/next-js": "^2.1.5",
+    "@chakra-ui/react": "^2.8.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.1",
+    "@mui/lab": "^5.0.0-alpha.137",
+    "@mui/material": "^5.14.2",
+    "@mui/x-date-pickers": "^5.0.20",
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.17",
+    "@types/react-dom": "18.2.7",
+    "@types/react-slick": "^0.23.10",
+    "encoding": "^0.1.13",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "firebase": "^9.23.0",
+    "firecms": "^2.0.5",
+    "framer-motion": "^10.15.0",
+    "next": "13.4.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-router": "^6.14.2",
+    "react-router-dom": "^6.14.2",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "typescript": "5.1.6",
+    "firebase-frameworks": "^0.10.4",
+    "firebase-functions": "^4.3.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2023-07-31T08:52:59.726Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase firebase-frameworks-nextjs-freshy-clinic to determine what to deploy 
+[debug] [2023-07-31T08:52:59.727Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-07-31T08:52:59.734Z] Found firebase-functions binary at '/Users/rotoon/Git/nextjs-freshy-clinic/.firebase/nextjs-freshy-clinic/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8628
+
+[debug] [2023-07-31T08:52:59.949Z] Got response from /__/functions.yaml {"endpoints":{"ssrnextjsfreshyclinic":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["asia-east1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrnextjsfreshyclinic"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase/nextjs-freshy-clinic/functions directory for uploading... 
+[info] i  functions: packaged /Users/rotoon/Git/nextjs-freshy-clinic/.firebase/nextjs-freshy-clinic/functions (105.22 MB) for uploading 
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-07-31T08:53:04.872Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/run.googleapis.com [none]
+[debug] [2023-07-31T08:53:04.872Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/run.googleapis.com x-goog-quota-user=projects/nextjs-freshy-clinic
+[debug] [2023-07-31T08:53:04.873Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/eventarc.googleapis.com [none]
+[debug] [2023-07-31T08:53:04.873Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/eventarc.googleapis.com x-goog-quota-user=projects/nextjs-freshy-clinic
+[debug] [2023-07-31T08:53:04.874Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/pubsub.googleapis.com [none]
+[debug] [2023-07-31T08:53:04.874Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/pubsub.googleapis.com x-goog-quota-user=projects/nextjs-freshy-clinic
+[debug] [2023-07-31T08:53:04.874Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/storage.googleapis.com [none]
+[debug] [2023-07-31T08:53:04.874Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/storage.googleapis.com x-goog-quota-user=projects/nextjs-freshy-clinic
+[debug] [2023-07-31T08:53:06.312Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/pubsub.googleapis.com 200
+[debug] [2023-07-31T08:53:06.312Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-07-31T08:53:06.315Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/run.googleapis.com 200
+[debug] [2023-07-31T08:53:06.316Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/run.googleapis.com [omitted]
+[info] ✔  functions: required API run.googleapis.com is enabled 
+[debug] [2023-07-31T08:53:06.329Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/storage.googleapis.com 200
+[debug] [2023-07-31T08:53:06.329Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/storage.googleapis.com [omitted]
+[info] ✔  functions: required API storage.googleapis.com is enabled 
+[debug] [2023-07-31T08:53:06.559Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/eventarc.googleapis.com 200
+[debug] [2023-07-31T08:53:06.559Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-freshy-clinic/services/eventarc.googleapis.com [omitted]
+[info] ✔  functions: required API eventarc.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-07-31T08:53:06.562Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/740275685973/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-07-31T08:53:06.565Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/740275685973/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-07-31T08:53:08.290Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/740275685973/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-07-31T08:53:08.290Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/740275685973/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-740275685973@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"106918854842217301442"}}
+[debug] [2023-07-31T08:53:08.450Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/740275685973/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-07-31T08:53:08.450Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/740275685973/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-740275685973@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"104015631485922562251"}}
+[debug] [2023-07-31T08:53:08.455Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic [none]
+[debug] [2023-07-31T08:53:08.836Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic 200
+[debug] [2023-07-31T08:53:08.836Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-freshy-clinic {"projectId":"nextjs-freshy-clinic","projectNumber":"740275685973","displayName":"nextjs-freshy-clinic","name":"projects/nextjs-freshy-clinic","resources":{"hostingSite":"nextjs-freshy-clinic","storageBucket":"nextjs-freshy-clinic.appspot.com","locationId":"asia-southeast1"},"state":"ACTIVE","etag":"1_8c432138-c4de-48a1-b644-df8d33ac4de7"}
+[debug] [2023-07-31T08:53:08.844Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/nextjs-freshy-clinic/versions [none]
+[debug] [2023-07-31T08:53:08.844Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/nextjs-freshy-clinic/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-07-31T08:53:09.783Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/nextjs-freshy-clinic/versions 200
+[debug] [2023-07-31T08:53:09.784Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/nextjs-freshy-clinic/versions {"name":"projects/740275685973/sites/nextjs-freshy-clinic/versions/dd5a89cf500e08fb","status":"CREATED","config":{},"labels":{"firebase-web-framework":"next_ssr","deployment-tool":"cli-firebase"}}
+[debug] [2023-07-31T08:53:09.790Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-07-31T08:53:09.790Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions [none]
+[debug] [2023-07-31T08:53:09.790Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions x-goog-quota-user=projects/nextjs-freshy-clinic
+[debug] [2023-07-31T08:53:09.790Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-07-31T08:53:10.945Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions 200
+[debug] [2023-07-31T08:53:10.945Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-freshy-clinic:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-07-31T08:53:10.946Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-07-31T08:53:10.947Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/nextjs-freshy-clinic/locations/asia-east1/functions:generateUploadUrl [none]
+[debug] [2023-07-31T08:53:11.444Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/nextjs-freshy-clinic/locations/asia-east1/functions:generateUploadUrl 200
+[debug] [2023-07-31T08:53:11.444Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/nextjs-freshy-clinic/locations/asia-east1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-740275685973-asia-east1/e3212a71-067e-4c25-ab8b-c9ed5c6f1869.zip?GoogleAccessId=service-740275685973@gcf-admin-robot.iam.gserviceaccount.com&Expires=1690795391&Signature=fRz0vAEglk91JhMu2b%2BaVbhbFCWbjvj9%2BrbVRzrd2o8hXWty8cIOm14kubfJROjU8%2B0ymO8t6ToNMG%2F9Y9OAnKWtk8EidiY6WVgI%2FCSLiY6Qj8WwFAhDHCw4RsFkdod0PDTzBt30FAliAqKC2GjD7yDxK49A4Ori04SxOcKelJB4%2BuBp3cUaJERzUBdSkWpxegDg4QOaF1B46p3stFAy%2B%2FCE%2F8hforxG%2B8IAKGusL1qYC%2FhhEzeobzzjlkUYHxCXz8rkyekdsxDA%2Fu05UrZFnnN0vBv6BANtVzO2oFXKzTBUFE%2BZPAgoTNDjYt7GCvvUx3cJ2ScCbYA8c%2F4emQTl%2Fg%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-740275685973-asia-east1","object":"e3212a71-067e-4c25-ab8b-c9ed5c6f1869.zip"}}
+[debug] [2023-07-31T08:53:11.445Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-740275685973-asia-east1/e3212a71-067e-4c25-ab8b-c9ed5c6f1869.zip GoogleAccessId=service-740275685973%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1690795391&Signature=fRz0vAEglk91JhMu2b%2BaVbhbFCWbjvj9%2BrbVRzrd2o8hXWty8cIOm14kubfJROjU8%2B0ymO8t6ToNMG%2F9Y9OAnKWtk8EidiY6WVgI%2FCSLiY6Qj8WwFAhDHCw4RsFkdod0PDTzBt30FAliAqKC2GjD7yDxK49A4Ori04SxOcKelJB4%2BuBp3cUaJERzUBdSkWpxegDg4QOaF1B46p3stFAy%2B%2FCE%2F8hforxG%2B8IAKGusL1qYC%2FhhEzeobzzjlkUYHxCXz8rkyekdsxDA%2Fu05UrZFnnN0vBv6BANtVzO2oFXKzTBUFE%2BZPAgoTNDjYt7GCvvUx3cJ2ScCbYA8c%2F4emQTl%2Fg%3D%3D
+[debug] [2023-07-31T08:53:11.445Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-740275685973-asia-east1/e3212a71-067e-4c25-ab8b-c9ed5c6f1869.zip [stream]
+[debug] [2023-07-31T08:53:15.059Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-740275685973-asia-east1/e3212a71-067e-4c25-ab8b-c9ed5c6f1869.zip 200
+[debug] [2023-07-31T08:53:15.060Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-740275685973-asia-east1/e3212a71-067e-4c25-ab8b-c9ed5c6f1869.zip [omitted]
+[info] ✔  functions: .firebase/nextjs-freshy-clinic/functions folder uploaded successfully 
+[info] i  hosting[nextjs-freshy-clinic]: beginning deploy... 
+[info] i  hosting[nextjs-freshy-clinic]: found 113 files in .firebase/nextjs-freshy-clinic/hosting 
+[debug] [2023-07-31T08:53:15.094Z] [hosting] uploading with 200 concurrency
+[debug] [2023-07-31T08:53:15.282Z] [hosting] hash cache [LmZpcmViYXNlL25leHRqcy1mcmVzaHktY2xpbmljL2hvc3Rpbmc] stored for 113 files
+[debug] [2023-07-31T08:53:15.282Z] [hosting][hash queue][FINAL] {"max":180,"min":9,"avg":20.150442477876105,"active":0,"complete":113,"success":113,"errored":0,"retried":0,"total":113,"elapsed":182}
+[debug] [2023-07-31T08:53:15.283Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/740275685973/sites/nextjs-freshy-clinic/versions/dd5a89cf500e08fb:populateFiles [none]
+[debug] [2023-07-31T08:53:15.283Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/740275685973/sites/nextjs-freshy-clinic/versions/dd5a89cf500e08fb:populateFiles {"files":{"/_next/static/GjUyJC5fD0l78XZekB0ap/_buildManifest.js":"7e116425c989fba7d21817b1dc2ff5427c92824caf57e5b3f7e0fc4cc1c60825","/_next/static/GjUyJC5fD0l78XZekB0ap/_ssgManifest.js":"02dbc1aeab6ef0a6ff2ff9a1643158cf9bb38929945eaa343a3627dee9ba6778","/vercel.svg":"4b9c0f01017bb87197f2ae0bd9717239fadf854131b34cce7b0f74ff6d513a4b","/404.html":"f9c8a906892b506fee2bcd80348ce8a79c423d3c3b2cc7fc090377e0c1129f1e","/next.svg":"33c5c6ad1d08bb69d8026289530e377b4d6e2a96f24562e209fd1e1e9ccee64a","/_next/static/chunks/2e3a737e-bb86224ef4c91980.js":"8f73a236497525d09f72629d4f95c48be23dfaf8eabadb3726b757340a51ac23","/_next/static/chunks/6ab6b39f-9daf0a450bda562e.js":"7d67897a840a252f21a9bab7dc6da711c223790dc2cb1c82428c4cbd36464120","/_next/static/chunks/303-b3be8b7cc047db57.js":"cc647a2107967ed6ecca2b47fdf873c02b9a2681673968aacceb22a6b560edc2","/favicon.ico":"fb26dad5f2f83a20ef9236e41a247addc43ba9ad0975bea8c7a793a7b02fc25b","/_next/static/chunks/976-81a6eee27c9e3453.js":"61490d0ad464d0fe2fc7f50696d69c9459ee65f68cc8843e111dab9532bf179c","/_next/static/chunks/main-app-5d16ec619a50084f.js":"87cd4db25cb66b319526ca4f0eed4f194e2436b5ffe9e44bf703524e9bd37fd5","/_next/static/chunks/webpack-5ecea00d70273af7.js":"0ce4c2fc01b8befbd61fbff70dfe6a4fb54638a474e92be220aa182a14faa464","/_next/static/chunks/app/admin/layout-c983aa2ce136d167.js":"555ca4961932bf2520729423204b37da54d8efa00c3a847b289117f8b5a11f96","/_next/static/chunks/app/layout-0166c49271d8de88.js":"1f4b57e54c2174aaab614761d1cd84ad0a09f657292d485a073c2e4a427895a0","/_next/static/chunks/app/page-2118b274cb4e8c7a.js":"dda8deab1b272c4d66b131173711853cc862a59ce759659905570b5df3de7dd0","/_next/static/chunks/pages/_error-dfe7dc34a8b1eaa4.js":"f08e7a273d3b8251ee6beac490551e1b76dd7f9acc44717c079da138454f7c9f","/_next/static/chunks/pages/_app-e523d30b4fa33999.js":"b74837ac5188eefbeba1c39680913a29a94426251f1fd3c7b6f96ed169ed82bd","/_next/static/chunks/app/admin/[[...any]]/page-106836358c29488f.js":"4cb57915881720f5b45e038ccdb7a4cc2ff70ccf84c172ca5a624fc5491ef8f8","/_next/static/css/25530619f1d28cc7.css":"d8809ddab8721e62cb8d136b2b62905766e5fe59d67be6ba2335969e89dde106","/_next/static/css/874a50ed6a8e3d43.css":"02ff490627eecfd7d3cbdb4275c94d671e05f64628471d3078e6215f157ede94","/_next/static/css/be564769f934b47e.css":"5ad29bd8ebf26d31bb3740cd2f0d17b36253bdb560c4a6d08455a8d3b7e0ca00","/_next/static/css/974d79351c3a41a4.css":"96189125a84165b8419847a3ff69d57c825c0ebc8cf9658b9554fd898fe5c56f","/_next/static/media/1c57ca6f5208a29b-s.woff2":"71fbde624aa36c289a6a6b0c817a94b3491a1691a49019a5a8b3df3f68d5bc3d","/_next/static/media/0e4fe491bf84089c-s.p.woff2":"acbe4afe4192b5c7021d5c2557f34179c6feff24a7c49ecdcf6d535bc7cc2d54","/_next/static/media/42d52f46a26971a3-s.woff2":"c366de3fdfb1dc77193cc99ce8f6bfc21ad27f7c5dc65a1676f477f455d8972b","/_next/static/media/44c3f6d12248be7f-s.woff2":"74f75fd09b5d264978ad4d6151a3da4e7847dd4b0956266a0e4c296a961d75fe","/_next/static/media/3dbd163d3bb09d47-s.woff2":"520f903c2ad3b4e97166d06958ba8303f8b38c6e064ff5e5781c18d58cad221f","/_next/static/media/4a8324e71b197806-s.woff2":"3b37799b1afe477a97e347b920f3595c1eb70e4a7b6804af6a6d2f6d6ea03a6b","/_next/static/media/5647e4c23315a2d2-s.woff2":"2f96938c9f945953e6ce2b279256d15f36efb301e742b00b10caa5649ad7e661","/_next/static/media/71ba03c5176fbd9c-s.woff2":"f78ba829d591d694ca876564f90254523c863cb89f62c43cf14672bf93fff3c4","/_next/static/media/627622453ef56b0d-s.p.woff2":"791a89e4e9ab23ebeeb349c052598819415537d479668d1f8684c307e1d5fbae","/_next/static/media/7be645d133f3ee22-s.woff2":"f25c349a2385bf327ab55d0868601f30b953fccca42ddeaa045b0b36a63b9ec6","/_next/static/media/7c53f7419436e04b-s.woff2":"81c76b5c5f252de36a1a84c3d23d40c4209008f1cac2d385ab75da0ac4a255b3","/_next/static/media/83e4d81063b4b659-s.woff2":"645bb64b1e805efc9940e4036942042cecddf4a1ea00f2a43e9e112b09692810","/_next/static/media/7d8c9b0ca4a64a5a-s.p.woff2":"ca02a6f6a179846c5da852ba4316fd0dfb075e385d556f2a22b63d8e1f41f49a","/_next/static/chunks/769-eaee04808a31e798.js":"c24691650cb4058e8ab70ca44e20b0cecf6699d73ca92bc500bce9fa6ac01891","/_next/static/chunks/fb2b3725-e16d08f87c8ecc0e.js":"99056d3fd67b6421d58ea13dcd1c3e409f6bb60cdcb9f7f235e52d400188eedd","/_next/static/chunks/896-542671b6966ade4c.js":"11a13ab0dd86d929d60b67c1832eae3658c40228048bf7090126e9f10f97cfdd","/_next/static/chunks/main-a12dfcd4da806213.js":"173f9f00dfc0926e63dc76b50bed228f5f3f8666f256b519a3c05e4cd49f6969","/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js":"76f0b40a22fd1d40b34e6072089550d8573c7207c510dc41038d823c7fa3c369","/_next/static/chunks/115-698d8615111df94f.js":"751a668de9e2b740a8b964b7cf6402bbc124622f07a2ba9d51d370b8cc41f8b0","/_next/static/chunks/c0300065-dfa3de601b644fca.js":"49a6327774d7f399bbd291f60875fa53b35a076995953c7201e21ca6d9669d18","/_next/static/media/8fb72f69fba4e3d2-s.woff2":"bf05a0e7c7e28b28d63bc224ff9336b16fe6403aff634bb2f619db01208e51c3","/_next/static/media/912a9cfe43c928d9-s.woff2":"d313de8492f48d2210079096f2e3b382e714577dbc59c6c57b379143f074a429","/_next/static/media/934c4b7cb736f2a3-s.p.woff2":"bf8092324805e47818f1996cb538735e21189551168b7bd916e7572fed49ccee","/_next/static/media/a5b77b63ef20339c-s.woff2":"64637256786da96f86ce44f3b694d59291ce5b78cb2ddaaf193a8ceb01e5a335","/_next/static/media/a6d330d7873e7320-s.woff2":"196f7d94034d634ccf2207fcf1bf5fabaeab7e90c434734646c8fdd2cb88ed0f","/_next/static/media/baf12dd90520ae41-s.woff2":"52c496b827ea59c81be30df1966cc3db933467a21848462739c5d27b862ced92","/_next/static/media/bbdb6f0234009aba-s.woff2":"fc553d93d6c1c777d386cd57dbb1206232bbb0016b5bcba82211d0e792991ed6","/_next/static/media/ajax-loader.0b80f665.gif":"f24bbc7fba4ab3263bf192656158a6290efc78f2afc7598600ef0e6087e9e822","/_next/static/media/bd976642b4f7fd99-s.woff2":"b5013ddeaf587f90bfe64a37f3b113c02153ccef19f89da81a77252ba69c5e05","/_next/static/media/cff529cd86cc0276-s.woff2":"013aa4ec9d9af1b6246c476d21669764824e4170d531ea65ed4e41958de6dbc1","/_next/static/media/d117eea74e01de14-s.woff2":"ff545aaa74147be61f0dd6c1f8f3a793b9e286b76d2db264966f7dee270dcf61","/_next/static/media/de9eb3a9f0fa9e10-s.woff2":"8a0934cd441e522d982e7f506ebeb3fe5be123319a79452b228d0d8aaeddc362","/_next/static/media/dfa8b99978df7bbc-s.woff2":"3613874243c97528673d2018185474d626c429ca622a85d6c341450880514868","/_next/static/media/e25729ca87cc7df9-s.woff2":"f88161ffc3b863c874482cae9ca0ce39f40834d7ded3a5cc4cadda255a4cdc2b","/_next/static/media/eb52b768f62eeeb4-s.woff2":"01dff0d6faf46c1413ec5a3ce9e2168b4c795695a16fc573d4ee7f9766347549","/_next/static/media/f06116e890b3dadb-s.woff2":"75f8103e60021613b6cdc98f262997e0305b462c6f7f6b2e8d75dc7d254738c8","/_next/static/media/ibm-plex-mono-cyrillic-400-normal.3a78e940.woff2":"4669d8a584d95b4281d32764d5c15f40d2d61b4853bb3526124c01a2bda68d29","/_next/static/media/ibm-plex-mono-cyrillic-ext-400-normal.2d01495e.woff2":"4bc6ae08c6a5662aeea173a70c8e4a0bf1a3e8847ed8fc20be247367698b91b9","/_next/static/media/ibm-plex-mono-latin-400-normal.a6ac3f83.woff2":"617b4a9dad9b3e5f9becde29565dca2ce1ac67cb9f47c552b737a1d32616f83b","/_next/static/media/ibm-plex-mono-latin-ext-400-normal.b93fd83a.woff2":"16f4a886f45ce5011acfdec096a9aa2fff9b5eb6ffc3f278cd6e2cd1fee8de80","/_next/static/media/ibm-plex-mono-vietnamese-400-normal.67cd71d9.woff2":"1cf6e21b7c4898664112e86d43530f84e17f519d7b61a1d84b3ffc5f5d273d41","/logo.png":"ba9e1126f72dc684cd3eefc5b8917090a4763d96626959ba609e8f8da41e06ec","/_next/static/chunks/framework-b72ae755b855c85c.js":"478165868a9c515c07f3dcba26eff3fd36fff0a0813c766983d5fee4f607bbb9","/_next/static/media/rubik-latin-300.154edb21.woff":"82b3d86ea2dfc37cfdecf628a9636e2ecbfe306ff668cca84129e2267b4867e3","/_next/static/media/rubik-latin-300.65a8c95a.woff2":"b6e24ea09284d6eec0756617fdaabb0bbe95c921d60e1f6b071b7093cab8a27e","/_next/static/media/rubik-latin-300italic.52de88f6.woff":"f8a96d28446ef71f15c38769c304543d4db808a6f286131cf0ebc0139eb82d47","/_next/static/media/rubik-latin-300italic.d7e4c358.woff2":"86422a24315cba96b89d820c2730d509856f7070230b8553a3eab18b69216f1f","/_next/static/media/rubik-latin-400.b9f55e96.woff":"0f440d0987282e634f22cc2c8a6250a0072954238d0d53287be3484abc8c094f","/_next/static/media/rubik-latin-400.6ea1fa8a.woff2":"408fafa97d396979c51f0d60b68121c40402c6cc4ccb2b1b8adbc0c0dcff9d84","/_next/static/media/rubik-latin-400italic.5103374d.woff":"64ff9fa2ba40903b645e6e9d1629370581c47bc07df838859a9f8dcc42d998e8","/_next/static/media/rubik-latin-400italic.5696fabe.woff2":"8edae851858eb9911fdd7b2774f0613573dcbff414f623269fef0cb5eee8b925","/_next/static/media/rubik-latin-500.cba06266.woff2":"8233bc72509a7c51fb6e3fae4782cef36d4eb1cacc3e9a1a631ed7ae0ed03842","/_next/static/media/rubik-latin-500.b0c940c1.woff":"64e2aa48868da39cb70ccf3a7d503b9548d305057770235e0315064d323cc8f2","/_next/static/media/rubik-latin-500italic.0ad54ae2.woff2":"16334f777b0e8a9bc64402aac8d2f5f5a67e28108385bbaa6a45fab42a1b709f","/_next/static/media/rubik-latin-500italic.1eb1111e.woff":"4fcb27f27866954b3bb813c7b2920b46e47ef3c28d67aaeaacdfe6f9d2876745","/_next/static/chunks/781-c72f2e77a84b0463.js":"189fb28fc9daaa24723d84f195abefcef4e4b55e0067960d9d68714115131d4c","/_next/static/media/rubik-latin-600.2a9583c1.woff":"f755b6781e5d3a7fcb1e468e32812ab68cce4153cae6af1487fd5760ccb60f0c","/_next/static/chunks/bce60fc1-4ee71b4162d81c2a.js":"e522ccccf3fd3f08dc94f9d19da4e352f3c10320225e083031d0715f70a3f155","/_next/static/media/rubik-latin-600.d32f4eb9.woff2":"d49676d780589cd98c791da09d69eacd641a5207671e84e3896043f995db3b94","/_next/static/media/rubik-latin-600italic.19d7d3ab.woff":"be91e4d0fec98514caaf31b8b0ab33accfd145531d3e538858a63fd1f5f41ee5","/_next/static/media/rubik-latin-600italic.f750e010.woff2":"5afdfe9397bc996ddb0e516e631bc920ab4480c900b8a389a1e5aee87702c8ef","/_next/static/media/ibm-plex-mono-all-400-normal.ef3468da.woff":"6051c9df9aecbb3773c74a47964d72fa42b885000f94ef94a94f27b8ed5344ca","/_next/static/media/rubik-latin-700.af91f2a3.woff":"b6dcecb37e87afa213c668eba992fad15590062de902cd51a2b8c2f325f4876b","/_next/static/chunks/cacdea1d-32a808466cd0bd9b.js":"886f2151b6f7ed8f73e517ebb7b5b49bdd886b134b1d1203938fd18ebb04c760","/_next/static/media/slick.25572f22.eot":"dc31d29e9ef5bdc1431085372877e0506db7654d9706b8a31103838650ee708c","/_next/static/media/slick.653a4cbb.woff":"fa7f9b78472ea626c47416d73657b92922ffce922767a9fdca149292d7eaeaf0","/_next/static/media/rubik-latin-700.b9ae9ad1.woff2":"a8ec5144afc58dd88c5258cc4634714a4d6b1847bb79b4502b832cee749864d5","/_next/static/media/rubik-latin-700italic.04790e58.woff":"365009012fbb932fe6b19826a6e452df7e3e76ff01eda2af2f41c0b945cdbfdf","/_next/static/media/slick.6aa1ee46.ttf":"2b2567cc103eb4aeb14648aaa15fcd8363d375bbc1c4e7b5f036c187088805a2","/_next/static/media/slick.f895cfdf.svg":"dfcaf4b122493a401fefdf30d8d0fa438d8c2eae8c71798fe6e08b32f91dc0ff","/_next/static/media/rubik-latin-700italic.230fc3a1.woff2":"c205a0afcd2cc2bd4eb7431a5142776a5c1318ec7b297c3bb707ab3f9611b479","/_next/static/media/rubik-latin-800italic.054fbd95.woff2":"130566433edb46548f11cec04ec09b41050d1ca33456cb65e931e5565b72826d","/_next/static/media/rubik-latin-800.0d619985.woff":"d4d68495e25a8cd8ccf32e5cf4fa3fa60df78860f5c5fbaca2752ac346c60b77","/_next/static/media/rubik-latin-800.1c9f7756.woff2":"c3346850347207228a263649bfce7cd9c5d87d3edf3feefa5afee80c22e14b17","/_next/static/media/rubik-latin-900.e3cf8fa7.woff2":"96e8df7f469cc399145b8dee78d4ee96a1150716282666ca7c56c1750a470802","/_next/static/media/rubik-latin-900.8b47b424.woff":"ee7c84eacc8de4e8bb12ed7e1e3c4b027c77985b78fcb582cf18f80fa6c54689","/_next/static/media/rubik-latin-900italic.3d33470b.woff2":"2d7a6609db373fa3f869172f15f8a441e3ceb271cedac80f0a78db8d1cc816c5","/_next/static/media/rubik-latin-900italic.47d47cc3.woff":"42fa8477682da0f28f94c30a491c870106a258aac6c4d66defad04f6785063c5","/_next/static/media/rubik-latin-800italic.acd4a3a2.woff":"504a1c2d36080e0bd51f4ec99b924fd7135d1de7c5cd6955c6573b7d9e91cec7","/fonts/LINESeedSansTH_Rg.otf":"5ab98a5e5ecc00ca38f0db121e4d9d193a68c319a871f7965b72e351642b68dc","/fonts/LINESeedSans_Rg.otf":"f550f3917e2fe9fceb218959d85f3c43f46f5432d63cc8f1061586b55c0ebe39","/_next/static/chunks/33450b47-f410543b5afa2ff8.js":"3bfa6d1865061c1cba3568d25db39268a7b81805963b11441774820e47c9d89c","/fonts/Urbanist-VariableFont_wght.ttf":"19fbaaa80af1b16ec042c11af73323c3d5afea034b878d47e8695c2a5aca32f6","/fonts/Oswald-VariableFont_wght.ttf":"96fefedc0ef98246d43129e99d899f4ae2f8dfb006fb8ae7e0406714ef7c97f8","/slides/desktop/2.jpg":"8239c42843dab8d9962df8ffe21f856a1f3509d07786019c4d7d0146019e82a1","/slides/mobile/1.jpg":"44e204b1844cc12e58e72f0b682d837d655d6f3b316b86399d220c7d8bf91bfd","/images/85344.jpg":"21c818307dd948253b365fc3fe9b79951a777a0d77d8e396e9c9de1c8c9d27d3","/slides/desktop/1.jpg":"1e99d296500c288c212257d0c324ca5f3d8afa65c6508ad01af221cf3f495e8f","/slides/mobile/2.jpg":"289f51f1b70d307c3c625fb6966fe62d3a0a71657f96958435a4ff8f661e9585","/_next/static/chunks/511fba3b-1c076865d76305cf.js":"5cea96dc1e16195dcdc4a2c163081f9b4c25c81a193eaef6c96e233524dce3a6","/_next/static/chunks/364-3cc8dcd9d7f1d3e4.js":"c7446c6c2370e58258dae7590c21d934a8d85ad9c84779a429d874e357b98342"}}
+[debug] [2023-07-31T08:53:16.180Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/740275685973/sites/nextjs-freshy-clinic/versions/dd5a89cf500e08fb:populateFiles 200
+[debug] [2023-07-31T08:53:16.181Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/740275685973/sites/nextjs-freshy-clinic/versions/dd5a89cf500e08fb:populateFiles {"uploadRequiredHashes":["f9c8a906892b506fee2bcd80348ce8a79c423d3c3b2cc7fc090377e0c1129f1e"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/nextjs-freshy-clinic/versions/dd5a89cf500e08fb/files"}
+[debug] [2023-07-31T08:53:16.182Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/nextjs-freshy-clinic/versions/dd5a89cf500e08fb/files/f9c8a906892b506fee2bcd80348ce8a79c423d3c3b2cc7fc090377e0c1129f1e [none]
+[debug] [2023-07-31T08:53:16.182Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/nextjs-freshy-clinic/versions/dd5a89cf500e08fb/files/f9c8a906892b506fee2bcd80348ce8a79c423d3c3b2cc7fc090377e0c1129f1e [stream]
+[debug] [2023-07-31T08:53:16.184Z] [hosting][populate queue][FINAL] {"max":901,"min":901,"avg":901,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":903}
+[debug] [2023-07-31T08:53:16.184Z] [hosting] uploads queued: 1
+[debug] [2023-07-31T08:53:17.478Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/nextjs-freshy-clinic/versions/dd5a89cf500e08fb/files/f9c8a906892b506fee2bcd80348ce8a79c423d3c3b2cc7fc090377e0c1129f1e 200
+[debug] [2023-07-31T08:53:17.478Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/nextjs-freshy-clinic/versions/dd5a89cf500e08fb/files/f9c8a906892b506fee2bcd80348ce8a79c423d3c3b2cc7fc090377e0c1129f1e [stream]
+[debug] [2023-07-31T08:53:17.479Z] [hosting][upload queue][FINAL] {"max":1298,"min":1298,"avg":1298,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1298}
+[info] ✔  hosting[nextjs-freshy-clinic]: file upload complete 
+[debug] [2023-07-31T08:53:17.480Z] [hosting] deploy completed after 2409ms
+[info] i  functions: creating Node.js 18 (2nd Gen) function firebase-frameworks-nextjs-freshy-clinic:ssrnextjsfreshyclinic(asia-east1)... 
+[debug] [2023-07-31T08:53:17.492Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/nextjs-freshy-clinic/locations/asia-east1/functions functionId=ssrnextjsfreshyclinic
+[debug] [2023-07-31T08:53:17.492Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/nextjs-freshy-clinic/locations/asia-east1/functions {"name":"projects/nextjs-freshy-clinic/locations/asia-east1/functions/ssrnextjsfreshyclinic","buildConfig":{"runtime":"nodejs18","entryPoint":"ssrnextjsfreshyclinic","source":{"storageSource":{"bucket":"gcf-v2-uploads-740275685973-asia-east1","object":"e3212a71-067e-4c25-ab8b-c9ed5c6f1869.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"nextjs-freshy-clinic\",\"appId\":\"1:740275685973:web:9181e21df74505e96562dc\",\"storageBucket\":\"nextjs-freshy-clinic.appspot.com\",\"locationId\":\"asia-southeast1\",\"apiKey\":\"AIzaSyC-cR3FCfs_EQwdPcfH-GEUn-k1UB-7e-s\",\"authDomain\":\"nextjs-freshy-clinic.firebaseapp.com\",\"messagingSenderId\":\"740275685973\",\"measurementId\":\"G-MCQ7X29X6Q\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"nextjs-freshy-clinic\",\"storageBucket\":\"nextjs-freshy-clinic.appspot.com\",\"locationId\":\"asia-southeast1\"}","GCLOUD_PROJECT":"nextjs-freshy-clinic","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-freshy-clinic/locations/asia-east1/services/ssrnextjsfreshyclinic"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-nextjs-freshy-clinic","firebase-functions-hash":"26574f3a775a1c0cc5c883758f055e45bc7afc95"}}
+[debug] [2023-07-31T08:53:18.351Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/nextjs-freshy-clinic/locations/asia-east1/functions 400
+[debug] [2023-07-31T08:53:18.351Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/nextjs-freshy-clinic/locations/asia-east1/functions {"error":{"code":400,"message":"Could not create Cloud Run service ssrnextjsfreshyclinic. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.","status":"INVALID_ARGUMENT"}}
+[warn] ⚠  functions: Your current project quotas don't allow for the current max instances setting of 100. Either reduce this function's maximum instances, or request a quota increase on the underlying Cloud Run service at https://cloud.google.com/run/quotas. 
+[warn] ⚠  functions: You can adjust the max instances value in your function's runtime options:
+	setGlobalOptions({maxInstances: 10}) 
+[error] Failed to create function projects/nextjs-freshy-clinic/locations/asia-east1/functions/ssrnextjsfreshyclinic
+[debug] [2023-07-31T08:53:18.370Z] Total Function Deployment time: 867
+[debug] [2023-07-31T08:53:18.370Z] 1 Functions Deployed
+[debug] [2023-07-31T08:53:18.370Z] 1 Functions Errored
+[debug] [2023-07-31T08:53:18.370Z] 0 Function Deployments Aborted
+[debug] [2023-07-31T08:53:18.370Z] Average Function Deployment time: 865
+[info] 
+[info] Functions deploy had errors with the following functions:
+	firebase-frameworks-nextjs-freshy-clinic:ssrnextjsfreshyclinic(asia-east1)
+[debug] [2023-07-31T08:53:18.490Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2023-07-31T08:53:18.494Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/nextjs-freshy-clinic/locations/asia-east1/repositories/gcf-artifacts/packages/ssrnextjsfreshyclinic [none]
+[debug] [2023-07-31T08:53:18.496Z] >>> [apiv2][query] GET https://asia.gcr.io/v2/nextjs-freshy-clinic/gcf/asia-east1/tags/list [none]
+[debug] [2023-07-31T08:53:18.924Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/nextjs-freshy-clinic/locations/asia-east1/repositories/gcf-artifacts/packages/ssrnextjsfreshyclinic 404
+[debug] [2023-07-31T08:53:18.924Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/nextjs-freshy-clinic/locations/asia-east1/repositories/gcf-artifacts/packages/ssrnextjsfreshyclinic {"error":{"code":404,"message":"Package \"projects/nextjs-freshy-clinic/locations/asia-east1/repositories/gcf-artifacts/packages/ssrnextjsfreshyclinic\" was not found.","status":"NOT_FOUND"}}
+[debug] [2023-07-31T08:53:18.946Z] <<< [apiv2][status] GET https://asia.gcr.io/v2/nextjs-freshy-clinic/gcf/asia-east1/tags/list 200
+[debug] [2023-07-31T08:53:18.947Z] <<< [apiv2][body] GET https://asia.gcr.io/v2/nextjs-freshy-clinic/gcf/asia-east1/tags/list {"child":[],"manifest":{},"name":"nextjs-freshy-clinic/gcf/asia-east1","tags":[]}
+[debug] [2023-07-31T08:53:18.947Z] Could not find image for function projects/nextjs-freshy-clinic/locations/asia-east1/functions/ssrnextjsfreshyclinic
+[debug] [2023-07-31T08:53:18.947Z] Functions deploy failed.
+[debug] [2023-07-31T08:53:18.947Z] {
+  "endpoint": {
+    "id": "ssrnextjsfreshyclinic",
+    "project": "nextjs-freshy-clinic",
+    "region": "asia-east1",
+    "entryPoint": "ssrnextjsfreshyclinic",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "__FIREBASE_FRAMEWORKS_ENTRY__": "next.js",
+      "__FIREBASE_DEFAULTS__": "{\"config\":{\"projectId\":\"nextjs-freshy-clinic\",\"appId\":\"1:740275685973:web:9181e21df74505e96562dc\",\"storageBucket\":\"nextjs-freshy-clinic.appspot.com\",\"locationId\":\"asia-southeast1\",\"apiKey\":\"AIzaSyC-cR3FCfs_EQwdPcfH-GEUn-k1UB-7e-s\",\"authDomain\":\"nextjs-freshy-clinic.firebaseapp.com\",\"messagingSenderId\":\"740275685973\",\"measurementId\":\"G-MCQ7X29X6Q\"},\"_authTokenSyncURL\":\"/__session\"}",
+      "FIREBASE_CONFIG": "{\"projectId\":\"nextjs-freshy-clinic\",\"storageBucket\":\"nextjs-freshy-clinic.appspot.com\",\"locationId\":\"asia-southeast1\"}",
+      "GCLOUD_PROJECT": "nextjs-freshy-clinic",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/nextjs-freshy-clinic/locations/asia-east1/services/ssrnextjsfreshyclinic"
+    },
+    "codebase": "firebase-frameworks-nextjs-freshy-clinic",
+    "cpu": 1,
+    "targetedByOnly": true,
+    "hash": "26574f3a775a1c0cc5c883758f055e45bc7afc95"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/nextjs-freshy-clinic/locations/asia-east1/functions/ssrnextjsfreshyclinic"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/nextjs-freshy-clinic/locations/asia-east1/functions/ssrnextjsfreshyclinic",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not create Cloud Run service ssrnextjsfreshyclinic. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 400, Could not create Cloud Run service ssrnextjsfreshyclinic. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2023-07-31T08:53:19.068Z] Error: Failed to create function ssrnextjsfreshyclinic in region asia-east1
+    at /Users/rotoon/.nvm/versions/node/v18.16.1/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:288:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV2Function (/Users/rotoon/.nvm/versions/node/v18.16.1/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:276:30)
+    at async Fabricator.createEndpoint (/Users/rotoon/.nvm/versions/node/v18.16.1/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:135:13)
+    at async handle (/Users/rotoon/.nvm/versions/node/v18.16.1/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:88:17)
+[error] 
+[error] Error: There was an error deploying functions

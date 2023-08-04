@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang='en'
+      lang='th'
       style={{ padding: '0px', overflowX: 'hidden' }}
     >
       <head>
