@@ -1,6 +1,6 @@
 // app/layout.tsx
 import { Metadata } from 'next'
-import ThemeRegistry from '@/Components/ThemeRegistry'
+import ThemeRegistry from '@/components/ThemeRegistry'
 
 export const metadata: Metadata = {
   title: 'The Freshy clinic เชียงใหม่ คลินิกเวชกรรม | ADMIN',
