@@ -1,13 +1,4 @@
-import { ChevronUpIcon } from '@chakra-ui/icons'
-import {
-  Box,
-  Center,
-  Flex,
-  HStack,
-  Image,
-  Text,
-  VStack,
-} from '@chakra-ui/react'
+import { Box, Flex, HStack, Image, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
 import { FaEnvelope, FaFacebookSquare, FaLine } from 'react-icons/fa'
 import { ImLocation, ImPhone } from 'react-icons/im'
