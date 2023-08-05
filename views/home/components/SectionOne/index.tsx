@@ -18,7 +18,7 @@ const SectionOne = () => {
     >
       <Heading
         as='h1'
-        fontSize={[26, 26, 26, 26, 28, 30]}
+        fontSize={[20, 22, 26, 26, 28, 30]}
         fontFamily='LINESeedSansTH-Rg'
         textAlign={{
           base: 'center',
@@ -33,9 +33,9 @@ const SectionOne = () => {
           borderRadius: '10px',
         }}
         alt='clinic'
-        src='/images/clinic.jpg'
-        width={300}
-        height={300}
+        src='/images/93203.jpg'
+        width={600}
+        height={450}
         priority
       />
       <Stack>

@@ -11,7 +11,7 @@ const settings = {
   slidesToScroll: 1,
   arrows: true,
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 2000,
 }
 
 const SlideShow = ({ slides }: { slides: TSlide[] }) => {
