@@ -75,6 +75,7 @@ function Header({}: Props) {
             spacing='1rem'
             fontSize='13px'
           >
+            <Text fontWeight='bold'>สาขาเชียงใหม่</Text>
             <Text>
               Tel :{' '}
               <a
@@ -87,8 +88,7 @@ function Header({}: Props) {
             <Text>
               E-mail :{' '}
               <a
-                href='mailto:Thefreshyclinic.cnx@gmail.com
-'
+                href='mailto:Thefreshyclinic.cnx@gmail.com'
                 target='_blank'
               >
                 Thefreshyclinic.cnx@gmail.com
@@ -98,9 +98,30 @@ function Header({}: Props) {
           </HStack>
           <Box>
             <HStack
-              alignItems='center'
-              spacing='1.5rem'
-            ></HStack>
+              spacing='1rem'
+              fontSize='13px'
+            >
+              <Text fontWeight='bold'>สาขาเชียงราย</Text>
+              <Text>
+                Tel :{' '}
+                <a
+                  href='tel:0957943443'
+                  target='_blank'
+                >
+                  095 7943 443
+                </a>
+              </Text>
+              <Text>
+                E-mail :{' '}
+                <a
+                  href='mailto:Thefreshyclinic.cr@gmail.com'
+                  target='_blank'
+                >
+                  Thefreshyclinic.cr@gmail.com
+                </a>
+              </Text>
+              {/* <Text>T.A.T License : 21/01126</Text> */}
+            </HStack>
           </Box>
         </Flex>
       </Center>

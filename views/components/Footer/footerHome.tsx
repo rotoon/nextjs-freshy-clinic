@@ -31,7 +31,7 @@ function FooterHome() {
           }}
           color='#fff'
           alignItems={{ base: 'flex-start', sm: 'center', md: 'flex-start' }}
-          flexDirection={['column', 'column', 'row', 'row', 'row', 'row']}
+          flexDirection={['column', 'column', 'column', 'row', 'row', 'row']}
         >
           <VStack
             alignItems={{ base: 'flex-start' }}
@@ -98,7 +98,7 @@ function FooterHome() {
             w='100%'
             fontFamily='LINESeedSansTH-Rg'
           >
-            <Text fontWeight='bold'>ติดต่อเรา</Text>
+            <Text fontWeight='bold'>ติดต่อเรา สาขาเชียงใหม่</Text>
             <HStack alignItems='start'>
               <Text mt='0.15rem'>
                 <ImLocation />
@@ -118,7 +118,7 @@ function FooterHome() {
               <Text
                 as={Link}
                 target='_blank'
-                href='mailto:anthaitour.info@gmail.com'
+                href='mailto:thefreshyclinic.cnx@gmail.com'
               >
                 thefreshyclinic.cnx@gmail.com
               </Text>
@@ -142,6 +142,65 @@ function FooterHome() {
                   as={Link}
                 >
                   097 196 3312
+                </Text>
+              </VStack>
+            </HStack>
+          </VStack>
+          <VStack
+            mt='1rem'
+            spacing={{
+              base: '0.25rem',
+              sm: '0.25rem',
+              md: '0.25rem',
+              lg: '1rem',
+            }}
+            alignItems='flex-start'
+            w='100%'
+            fontFamily='LINESeedSansTH-Rg'
+          >
+            <Text fontWeight='bold'>ติดต่อเรา สาขาเชียงราย</Text>
+            <HStack alignItems='start'>
+              <Text mt='0.15rem'>
+                <ImLocation />
+              </Text>
+              <Text
+                lineHeight='20px'
+                fontFamily='LINESeedSansTH-Rg'
+              >
+                66/42 ม.11 ต.สันทราย อ.เมืองเชียงราย จ.เชียงราย 57000
+              </Text>
+            </HStack>
+            <HStack>
+              <Text>
+                <FaEnvelope />
+              </Text>
+              <Text
+                as={Link}
+                target='_blank'
+                href='mailto:thefreshyclinic.cr@gmail.com'
+              >
+                thefreshyclinic.cr@gmail.com
+              </Text>
+            </HStack>
+            <HStack alignItems='start'>
+              <Text mt='0.15rem'>
+                <ImPhone />
+              </Text>
+              <VStack
+                spacing='0px'
+                alignItems='flex-start'
+              >
+                <Text fontFamily='LINESeedSansTH-Rg'>
+                  สนใจจองคิว สอบถามข้อมูล
+                </Text>
+                <Text
+                  mt={{ base: '0rem', sm: '-0.15rem', md: '-0.25rem' }}
+                  style={{ fontWeight: 'bold' }}
+                  href='tel:0957943443'
+                  target='_blank'
+                  as={Link}
+                >
+                  095 794 3443
                 </Text>
               </VStack>
             </HStack>
