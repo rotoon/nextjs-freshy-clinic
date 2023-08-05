@@ -33,9 +33,9 @@ const SectionOne = () => {
           borderRadius: '10px',
         }}
         alt='clinic'
-        src='/images/clinic.jpg'
-        width={400}
-        height={400}
+        src='/images/93203.jpg'
+        width={600}
+        height={450}
         priority
       />
       <Stack>
