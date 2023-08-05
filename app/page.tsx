@@ -3,15 +3,17 @@ import Home from '@/views/home'
 export interface HomeComponentProps {
   slides: {
     total: number
-    list: {
-      id: string
-      image: string
-      createdAt: string
-      type: string
-      order: number
-      updatedAt: string
-    }[]
+    list: TSlide[]
   }
+}
+
+export type TSlide = {
+  id: string
+  image: string
+  createdAt: string
+  type: string
+  order: number
+  updatedAt: string
 }
 
 async function getData() {
