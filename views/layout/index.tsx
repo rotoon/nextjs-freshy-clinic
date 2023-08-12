@@ -1,5 +1,6 @@
 import { FooterHome, Hamburger, Header } from '@/views/components'
 import { Box } from '@chakra-ui/react'
+import FabButton from '../components/Fab'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -23,6 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       >
         <FooterHome />
       </Box>
+      <FabButton />
     </>
   )
 }
