@@ -4,7 +4,7 @@ import { Action, Fab } from 'react-tiny-fab'
 
 const FabButton = () => (
   <Fab
-    style={{ bottom: 20, right: 20 }}
+    style={{ bottom: 24, right: 24 }}
     mainButtonStyles={{
       backgroundColor: '#CF5363',
     }}

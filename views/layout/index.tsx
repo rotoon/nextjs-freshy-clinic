@@ -1,6 +1,13 @@
 import { FooterHome, Hamburger, Header } from '@/views/components'
 import { Box } from '@chakra-ui/react'
-import FabButton from '../components/Fab'
+import dynamic from 'next/dynamic'
+
+const FabButton = dynamic(
+  () => {
+    return import('../components/Fab')
+  },
+  { ssr: false, loading: () => <p>Loading...</p> }
+)
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
