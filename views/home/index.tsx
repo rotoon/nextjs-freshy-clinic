@@ -1,9 +1,11 @@
 'use client'
 import Layout from '@/views/layout'
 import { HomeComponentProps } from '@/app/page'
+import { Container, VStack } from '@chakra-ui/react'
 import SlideShow from './components/Slideshows'
 import SectionOne from './components/SectionOne'
-import { Container, VStack } from '@chakra-ui/react'
+import SectionTwo from './components/SectionTwo'
+import SectionThree from './components/SectionThree'
 
 export default function Home({ slides }: HomeComponentProps) {
   return (
@@ -14,8 +16,10 @@ export default function Home({ slides }: HomeComponentProps) {
         maxW='7xl'
         my={{ base: 4, md: 10 }}
       >
-        <VStack spacing={4}>
+        <VStack spacing={20}>
           <SectionOne />
+          <SectionTwo />
+          <SectionThree />
         </VStack>
       </Container>
     </Layout>

@@ -1,16 +1,16 @@
 import { FaFacebookMessenger, FaLine } from 'react-icons/fa'
-import { FaMessage } from 'react-icons/fa6'
+import { MdContacts } from 'react-icons/md'
 import { Action, Fab } from 'react-tiny-fab'
 
 const FabButton = () => (
   <Fab
-    style={{ bottom: 24, right: 24 }}
+    style={{ bottom: 0, right: 0 }}
     mainButtonStyles={{
-      backgroundColor: '#CF5363',
+      backgroundColor: 'white',
     }}
     icon={
-      <FaMessage
-        color='white'
+      <MdContacts
+        color='#B06DFF'
         size={25}
       />
     }

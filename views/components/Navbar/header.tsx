@@ -19,8 +19,8 @@ function Header({}: Props) {
   const isPathHome = pathName === '/' ? 'bold' : 'normal'
   const isPathHomeScaleX = pathName === '/' ? 'scaleX(1)' : 'scaleX(0)'
 
-  const isPathTour = pathName.includes('/tour') ? 'bold' : 'normal'
-  const isPathTourScaleX = pathName.includes('/tour')
+  const isPathTour = pathName.includes('/about-us') ? 'bold' : 'normal'
+  const isPathTourScaleX = pathName.includes('/about-us')
     ? 'scaleX(1)'
     : 'scaleX(0)'
 
@@ -185,10 +185,10 @@ function Header({}: Props) {
               ]}
               transition='all 0.4s'
               as={Link}
-              href='/tour'
+              href='/about-us'
               fontWeight={isPathTour}
               _after={{ transform: isPathTourScaleX }}
-              color={pathName === '/tour' ? '#fff' : '#fff'}
+              color={pathName === '/about-us' ? '#fff' : '#fff'}
             >
               เกี่ยวกับเรา
             </Text>
@@ -220,7 +220,7 @@ function Header({}: Props) {
               color={pathName === '/about' ? '#fff' : '#fff'}
               transition='all 0.4s'
               as={Link}
-              href='/about'
+              href='/about-us'
               fontWeight={isPathAbout}
               _after={{ transform: isPathAboutScaleX }}
             >

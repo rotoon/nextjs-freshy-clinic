@@ -168,7 +168,7 @@ function Hamburger({}: Props) {
                 </Center>
                 <Center
                   as={Link}
-                  href='/tour'
+                  href='/about-us'
                   bg={isPathTourbg}
                   px='0rem'
                   w='100%'
@@ -196,7 +196,7 @@ function Hamburger({}: Props) {
                 </Center>
                 <Center
                   as={Link}
-                  href='/about'
+                  href='/about-us'
                   bg={isPathAboutbg}
                   px='0rem'
                   w='100%'
@@ -208,7 +208,7 @@ function Hamburger({}: Props) {
                 >
                   <Text
                     fontSize='16px'
-                    fontWeight={pathName === '/about' ? 'bold' : 'normal'}
+                    fontWeight={pathName === '/about-us' ? 'bold' : 'normal'}
                     py='1.75rem'
                     w='max-content'
                     border='1px solid transparent'
@@ -217,7 +217,7 @@ function Hamburger({}: Props) {
                     _focus={{ border: '1px solid transparent' }}
                     _after={{ transform: isPathAbout }}
                     onClick={() => onClose()}
-                    color={pathName === '/about' ? '#4b4b4b' : '#000'}
+                    color={pathName === '/about-us' ? '#4b4b4b' : '#000'}
                   >
                     บริการของเรา
                   </Text>
