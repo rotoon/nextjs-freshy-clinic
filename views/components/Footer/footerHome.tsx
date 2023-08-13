@@ -47,12 +47,16 @@ function FooterHome() {
               borderRadius={10}
             />
             <Text
-              w={{ base: '100%', sm: '100%', md: '20rem', lg: '18rem' }}
+              w={{ base: '100%', sm: '100%', md: '20rem', lg: '20rem' }}
               lineHeight='20px'
               fontFamily='LINESeedSansTH-Rg'
             >
-              คลินิกเสริมความงามอย่างครบวงจร ศัลยกรรม หัตการ
-              ทรีทเม้นท์ต่างๆให้เราดูแลนะคะ
+              คลินิกเฉพาะทางด้านเสริมความงาม
+              โดยแพทย์ผู้เชี่ยวชาญด้านหัตการเสริมความงาม
+              พร้อมให้คำปรึกษาแนะนำก่อนทำทุกเคสเพื่อให้ตรงตามความต้องการของลูกค้า
+              ปัจจุบันทางคลินิกเปิดให้บริการ สาขาเชียงใหม่ และสาขาเชียงราย
+              เปิดให้บริการทุกวันตั้งแต่เวลา 11.00 - 20.00น.
+              ให้คลินิกของเราได้ดูแลคุณนะคะ
             </Text>
           </VStack>
 
@@ -73,7 +77,7 @@ function FooterHome() {
               cursor='pointer'
               className='hover-underline-footer'
               as={Link}
-              href='/about'
+              href='/about-us'
             >
               เกี่ยวกับเรา
             </Text>
@@ -81,7 +85,7 @@ function FooterHome() {
               cursor='pointer'
               className='hover-underline-footer'
               as={Link}
-              href='/about'
+              href='/about-us'
             >
               บริการของเรา
             </Text>
@@ -107,8 +111,8 @@ function FooterHome() {
                 lineHeight='20px'
                 fontFamily='LINESeedSansTH-Rg'
               >
-                76/2 ถ.หมื่นด้ามพร้าคต ต.ช้างเผือก อ.เมือง จ.เชียงใหม่,
-                เชียงใหม่, ประเทศไทย, 50300
+                76/2 ถ.หมื่นด้ามพร้าคต ต.ช้างเผือก อ.เมืองเชียงใหม่ จ.เชียงใหม่
+                50300
               </Text>
             </HStack>
             <HStack>
