@@ -1,3 +1,4 @@
+import { TProgram } from '@/app/page'
 import {
   Center,
   Heading,
@@ -7,10 +8,7 @@ import {
   Text,
 } from '@chakra-ui/react'
 import Image from 'next/image'
-import { FaClinicMedical } from 'react-icons/fa'
-import { FaUserDoctor } from 'react-icons/fa6'
-import { GrCertificate } from 'react-icons/gr'
-const SectionThree = () => {
+const SectionThree = ({ programs }: { programs: TProgram[] }) => {
   return (
     <Stack
       spacing={{
@@ -48,106 +46,43 @@ const SectionThree = () => {
         justifyContent='center'
         alignItems='center'
       >
-        <Stack
-          justifyContent='center'
-          alignItems='center'
-          cursor='pointer'
-          spacing={4}
-        >
-          <Image
-            style={{
-              borderRadius: 10,
-            }}
-            alt='hifu'
-            src='/images/products/hifu.jpg'
-            height={350}
-            width={350}
-          />
-          <Stack spacing={0}>
-            <Heading
-              fontFamily='LINESeedSansTH-Rg'
-              size='md'
-              textAlign='center'
-            >
-              Hifu
-            </Heading>
-            <Text
-              fontFamily='LINESeedSansTH-Rg'
-              fontSize={16}
-              textAlign='center'
-              color='dimgray'
-            >
-              ปรับหน้าเรียว
-            </Text>
+        {programs.map((program) => (
+          <Stack
+            key={program.title}
+            justifyContent='center'
+            alignItems='center'
+            cursor='pointer'
+            spacing={4}
+          >
+            <Image
+              style={{
+                borderRadius: 10,
+              }}
+              alt='hifu'
+              src={program.image}
+              height={350}
+              width={350}
+              priority
+            />
+            <Stack spacing={0}>
+              <Heading
+                fontFamily='LINESeedSansTH-Rg'
+                size='md'
+                textAlign='center'
+              >
+                {program.title}
+              </Heading>
+              <Text
+                fontFamily='LINESeedSansTH-Rg'
+                fontSize={16}
+                textAlign='center'
+                color='dimgray'
+              >
+                {program.desc}
+              </Text>
+            </Stack>
           </Stack>
-        </Stack>
-
-        <Stack
-          justifyContent='center'
-          alignItems='center'
-          cursor='pointer'
-          spacing={4}
-        >
-          <Image
-            style={{
-              borderRadius: 10,
-            }}
-            alt='hifu'
-            src='/images/products/botox.jpg'
-            height={350}
-            width={350}
-          />
-          <Stack spacing={0}>
-            <Heading
-              fontFamily='LINESeedSansTH-Rg'
-              size='md'
-              textAlign='center'
-            >
-              Botox
-            </Heading>
-            <Text
-              fontFamily='LINESeedSansTH-Rg'
-              fontSize={16}
-              textAlign='center'
-              color='dimgray'
-            >
-              ยกหน้าให้ตึง
-            </Text>
-          </Stack>
-        </Stack>
-        <Stack
-          justifyContent='center'
-          alignItems='center'
-          cursor='pointer'
-          spacing={4}
-        >
-          <Image
-            style={{
-              borderRadius: 10,
-            }}
-            alt='hifu'
-            src='/images/products/roymai.jpg'
-            height={350}
-            width={350}
-          />
-          <Stack spacing={0}>
-            <Heading
-              fontFamily='LINESeedSansTH-Rg'
-              size='md'
-              textAlign='center'
-            >
-              ร้อยไหม
-            </Heading>
-            <Text
-              fontFamily='LINESeedSansTH-Rg'
-              fontSize={16}
-              textAlign='center'
-              color='dimgray'
-            >
-              ยกกระชับใบหน้า
-            </Text>
-          </Stack>
-        </Stack>
+        ))}
       </SimpleGrid>
       <Center>
         <Link fontFamily='LINESeedSansTH-Rg'>

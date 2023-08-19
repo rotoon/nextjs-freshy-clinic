@@ -7,7 +7,7 @@ import SectionOne from './components/SectionOne'
 import SectionTwo from './components/SectionTwo'
 import SectionThree from './components/SectionThree'
 
-export default function Home({ slides }: HomeComponentProps) {
+export default function Home({ slides, programs }: HomeComponentProps) {
   return (
     <Layout>
       <SlideShow slides={slides?.list} />
@@ -19,7 +19,7 @@ export default function Home({ slides }: HomeComponentProps) {
         <VStack spacing={20}>
           <SectionOne />
           <SectionTwo />
-          <SectionThree />
+          <SectionThree programs={programs.list.filter((p) => p.isRecommend)} />
         </VStack>
       </Container>
     </Layout>
