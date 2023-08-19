@@ -50,59 +50,40 @@ exports.slide = functions.region('asia-southeast1').https.onRequest(
   })
 )
 
-// exports.tour = functions.region('asia-southeast1').https.onRequest(
-//   applyMiddleware(async (request, response) => {
-//     try {
-//       if (request.method === 'GET') {
-//         if (request.params['0'] !== '') {
-//           const slug = request.params['0']
-//           const tourRef = await db
-//             .collection('tours')
-//             .where('slug', '==', slug)
-//             .get()
-//           if (tourRef.size === 1) {
-//             const tour =
-//               (tourRef.size > 0 &&
-//                 tourRef.docs.map((doc) => ({
-//                   id: doc.id,
-//                   ...doc.data(),
-//                   albums: doc.data().albums.map((album) => album.image),
-//                   createdAt: doc.data()?.updatedAt.toDate() || '',
-//                   updatedAt: doc.data()?.updatedAt.toDate() || '',
-//                 }))) ||
-//               []
-//             response.status(200).send(tour[0])
-//           } else {
-//             response.status(204).send({ message: 'No data found' })
-//           }
-//         } else {
-//           const tourRef = db.collection('tours').orderBy('order', 'asc')
-//           const [tourCount, toursSnap] = await Promise.all([
-//             tourRef.count().get(),
-//             tourRef.get(),
-//           ])
+exports.programs = functions.region('asia-southeast1').https.onRequest(
+  applyMiddleware(async (request, response) => {
+    try {
+      if (request.method === 'GET') {
+        let programRef = db.collection('Programs')
+        if (request.params['0'] === 'recommend') {
+          programRef = programRef.where('isRecommend', '==', true)
+        }
 
-//           const tours =
-//             (toursSnap.size > 0 &&
-//               toursSnap.docs.map((doc) => ({
-//                 id: doc.id,
-//                 ...doc.data(),
-//                 albums: doc.data().albums.map((album) => album.image),
-//                 createdAt: doc.data()?.updatedAt.toDate() || '',
-//                 updatedAt: doc.data()?.updatedAt.toDate() || '',
-//               }))) ||
-//             []
+        programRef = programRef.orderBy('order', 'asc')
+        const [programCount, programsSnap] = await Promise.all([
+          programRef.count().get(),
+          programRef.get(),
+        ])
 
-//           response.status(200).send({
-//             total: tourCount.data().count,
-//             list: tours,
-//           })
-//         }
-//       } else {
-//         response.status(405).send('Method not allowed')
-//       }
-//     } catch (error) {
-//       throw new Error(error.message)
-//     }
-//   })
-// )
+        const programs =
+          (programsSnap.size > 0 &&
+            programsSnap.docs.map((doc) => ({
+              id: doc.id,
+              ...doc.data(),
+              createdAt: doc.data()?.updatedAt.toDate() || '',
+              updatedAt: doc.data()?.updatedAt.toDate() || '',
+            }))) ||
+          []
+
+        response.status(200).send({
+          total: programCount.data().count,
+          list: programs,
+        })
+      } else {
+        response.status(405).send('Method not allowed')
+      }
+    } catch (error) {
+      throw new Error(error.message)
+    }
+  })
+)

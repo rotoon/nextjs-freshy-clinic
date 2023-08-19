@@ -9,7 +9,7 @@ import 'typeface-rubik'
 import '@fontsource/ibm-plex-mono'
 
 import { firebaseConfig } from '@/config/firebase-config'
-import { slidesCollection } from '@/collections'
+import { slidesCollection, programsCollection } from '@/collections'
 
 export default function App() {
   const myAuthenticator: Authenticator<FirebaseUser> = useCallback(
@@ -35,7 +35,7 @@ export default function App() {
       name={'The Freshy Clinic | MANAGE'}
       logo={'/logo.png'}
       authentication={myAuthenticator}
-      collections={[slidesCollection]}
+      collections={[slidesCollection, programsCollection]}
       firebaseConfig={firebaseConfig}
       signInOptions={['password']}
       LoginView={CustomLoginView}
