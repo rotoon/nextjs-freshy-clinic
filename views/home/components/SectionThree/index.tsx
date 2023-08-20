@@ -1,13 +1,8 @@
 import { TProgram } from '@/app/page'
-import {
-  Center,
-  Heading,
-  Link,
-  SimpleGrid,
-  Stack,
-  Text,
-} from '@chakra-ui/react'
-import Image from 'next/image'
+import { Center, Heading, Link, SimpleGrid, Stack } from '@chakra-ui/react'
+import NextLink from 'next/link'
+import ProgramCard from '@/views/components/ProgramCard'
+
 const SectionThree = ({ programs }: { programs: TProgram[] }) => {
   return (
     <Stack
@@ -47,46 +42,22 @@ const SectionThree = ({ programs }: { programs: TProgram[] }) => {
         alignItems='center'
       >
         {programs.map((program) => (
-          <Stack
+          <ProgramCard
             key={program.title}
-            justifyContent='center'
-            alignItems='center'
-            cursor='pointer'
-            spacing={4}
-          >
-            <Image
-              style={{
-                borderRadius: 10,
-              }}
-              alt='hifu'
-              src={program.image}
-              height={350}
-              width={350}
-              priority
-            />
-            <Stack spacing={0}>
-              <Heading
-                fontFamily='LINESeedSansTH-Rg'
-                size='md'
-                textAlign='center'
-              >
-                {program.title}
-              </Heading>
-              <Text
-                fontFamily='LINESeedSansTH-Rg'
-                fontSize={16}
-                textAlign='center'
-                color='dimgray'
-              >
-                {program.desc}
-              </Text>
-            </Stack>
-          </Stack>
+            program={program}
+          />
         ))}
       </SimpleGrid>
-      <Center>
-        <Link fontFamily='LINESeedSansTH-Rg'>
-          ดูบริการของ The Freshy Clinic เพิ่มเติม
+      <Center className='effect-three'>
+        <Link
+          fontFamily='LINESeedSansTH-Rg'
+          href='/service-programs'
+          as={NextLink}
+          _hover={{
+            textDecoration: 'none',
+          }}
+        >
+          {`ดูบริการของ The Freshy Clinic เพิ่มเติม `}
         </Link>
       </Center>
     </Stack>

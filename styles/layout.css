@@ -115,3 +115,33 @@ body {
     display: none;
   }
 }
+
+.effect-three > a {
+  font-family: LINESeedSansTH-Rg;
+  display: inline-block;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    height: 2px;
+    margin: -1px 0;
+    left: 0;
+    background-color: rebeccapurple;
+    transition: all 0.4s ease-in 0s;
+  }
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+.grow img {
+  transition: 0.4s ease;
+}
+
+.grow img:hover {
+  transition: 0.4s ease;
+  transform: translateY(-10px);
+}

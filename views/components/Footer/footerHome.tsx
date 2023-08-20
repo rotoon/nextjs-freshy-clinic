@@ -85,7 +85,7 @@ function FooterHome() {
               cursor='pointer'
               className='hover-underline-footer'
               as={Link}
-              href='/about-us'
+              href='/service-programs'
             >
               บริการของเรา
             </Text>
