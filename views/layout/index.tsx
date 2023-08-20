@@ -6,7 +6,7 @@ const FabButton = dynamic(
   () => {
     return import('../components/Fab')
   },
-  { ssr: false, loading: () => <p>Loading...</p> }
+  { ssr: false, loading: () => null }
 )
 
 export default function Layout({ children }: { children: React.ReactNode }) {

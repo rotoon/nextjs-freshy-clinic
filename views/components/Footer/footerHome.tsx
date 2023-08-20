@@ -73,22 +73,26 @@ function FooterHome() {
             fontFamily='LINESeedSansTH-Rg'
           >
             <Text fontWeight='bold'>เมนู</Text>
-            <Text
-              cursor='pointer'
-              className='hover-underline-footer'
-              as={Link}
-              href='/about-us'
-            >
-              เกี่ยวกับเรา
-            </Text>
-            <Text
-              cursor='pointer'
-              className='hover-underline-footer'
-              as={Link}
-              href='/service-programs'
-            >
-              บริการของเรา
-            </Text>
+            <div className='effect-three-header'>
+              <Text
+                cursor='pointer'
+                className='hover-underline-footer'
+                as={Link}
+                href='/about-us'
+              >
+                เกี่ยวกับเรา
+              </Text>
+            </div>
+            <div className='effect-three-header'>
+              <Text
+                cursor='pointer'
+                className='hover-underline-footer'
+                as={Link}
+                href='/service-programs'
+              >
+                บริการของเรา
+              </Text>
+            </div>
           </VStack>
           <VStack
             mt='1rem'

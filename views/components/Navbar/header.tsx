@@ -1,20 +1,11 @@
 import { usePathname } from 'next/navigation'
 
-import {
-  Box,
-  Button,
-  Center,
-  Flex,
-  HStack,
-  Image,
-  Text,
-} from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
-import './navbar.css'
+import { Box, Center, Flex, HStack, Image, Text } from '@chakra-ui/react'
+import React, { useState } from 'react'
 import Link from 'next/link'
-type Props = {}
+import './navbar.css'
 
-function Header({}: Props) {
+function Header() {
   const pathName = usePathname()
   const isPathHome = pathName === '/' ? 'bold' : 'normal'
   const isPathHomeScaleX = pathName === '/' ? 'scaleX(1)' : 'scaleX(0)'
@@ -32,26 +23,11 @@ function Header({}: Props) {
   const isPathContactScaleX =
     pathName === '/contact-us' ? 'scaleX(1)' : 'scaleX(0)'
 
-  const [navSize, setnavSize] = useState<String>('5.5rem')
-  const [navColor, setnavColor] = useState<String>('#b06dff')
-  const [navImage, setnavImage] = useState<String>('3.75rem')
-  const [navFont, setnavFont] = useState<String>('19px')
-  const [navFontResponsive, setnavFontResponsive] = useState<String>('18px')
-  const listenScrollEvent = () => {
-    window.scrollY > 10 ? setnavColor('#b06dff') : setnavColor('transparent')
-    window.scrollY > 10 ? setnavSize('4.5rem') : setnavSize('5.5rem')
-    window.scrollY > 10 ? setnavImage('3.25rem') : setnavImage('3.75rem')
-    window.scrollY > 10 ? setnavFont('17px') : setnavFont('19px')
-    window.scrollY > 10
-      ? setnavFontResponsive('16px')
-      : setnavFontResponsive('17px')
-  }
-  // useEffect(() => {
-  //   window.addEventListener('scroll', listenScrollEvent)
-  //   return () => {
-  //     window.removeEventListener('scroll', listenScrollEvent)
-  //   }
-  // }, [])
+  const [navSize] = useState<String>('5.5rem')
+  const [navColor] = useState<String>('#b06dff')
+  const [navImage] = useState<String>('3.75rem')
+  const [navFont] = useState<String>('19px')
+  const [navFontResponsive] = useState<String>('18px')
   return (
     <Box
       zIndex='banner'
@@ -121,7 +97,6 @@ function Header({}: Props) {
                   Thefreshyclinic.cr@gmail.com
                 </a>
               </Text>
-              {/* <Text>T.A.T License : 21/01126</Text> */}
             </HStack>
           </Box>
         </Flex>
@@ -154,45 +129,55 @@ function Header({}: Props) {
             justifyContent='space-evenly'
             w='100%'
           >
-            <Text
-              className='textcss-header'
-              fontSize={[
-                `${navFontResponsive}`,
-                `${navFontResponsive}`,
-                `${navFontResponsive}`,
-                `${navFontResponsive}`,
-                `${navFont}`,
-                `${navFont}`,
-              ]}
-              _after={{ transform: isPathHomeScaleX }}
-              transition='all 0.4s'
-              as={Link}
-              href='/'
-              fontWeight={isPathHome}
-              color={pathName === '/' ? '#fff' : '#fff'}
+            <div
+              className={`effect-three-header${
+                pathName === '/' ? '-active' : ''
+              }`}
             >
-              HOME
-            </Text>
+              <Text
+                fontSize={[
+                  `${navFontResponsive}`,
+                  `${navFontResponsive}`,
+                  `${navFontResponsive}`,
+                  `${navFontResponsive}`,
+                  `${navFont}`,
+                  `${navFont}`,
+                ]}
+                _after={{ transform: isPathHomeScaleX }}
+                transition='all 0.4s'
+                as={Link}
+                href='/'
+                fontWeight={isPathHome}
+                color={pathName === '/' ? '#fff' : '#red'}
+              >
+                HOME
+              </Text>
+            </div>
+            <div
+              className={`effect-three-header${
+                pathName === '/about-us' ? '-active' : ''
+              }`}
+            >
+              <Text
+                fontSize={[
+                  `${navFontResponsive}`,
+                  `${navFontResponsive}`,
+                  `${navFontResponsive}`,
+                  `${navFontResponsive}`,
+                  `${navFont}`,
+                  `${navFont}`,
+                ]}
+                transition='all 0.4s'
+                as={Link}
+                href='/about-us'
+                fontWeight={isPathAbout}
+                _after={{ transform: isPathAboutScaleX }}
+                color={pathName === '/about-us' ? '#fff' : '#fff'}
+              >
+                เกี่ยวกับเรา
+              </Text>
+            </div>
 
-            <Text
-              className='textcss-header'
-              fontSize={[
-                `${navFontResponsive}`,
-                `${navFontResponsive}`,
-                `${navFontResponsive}`,
-                `${navFontResponsive}`,
-                `${navFont}`,
-                `${navFont}`,
-              ]}
-              transition='all 0.4s'
-              as={Link}
-              href='/about-us'
-              fontWeight={isPathAbout}
-              _after={{ transform: isPathAboutScaleX }}
-              color={pathName === '/about-us' ? '#fff' : '#fff'}
-            >
-              เกี่ยวกับเรา
-            </Text>
             <HStack
               fontFamily='Oswald-VariableFont-wght'
               alignItems='center'
@@ -208,44 +193,54 @@ function Header({}: Props) {
                 borderRadius={10}
               />
             </HStack>
-            <Text
-              className='textcss-header'
-              fontSize={[
-                `${navFontResponsive}`,
-                `${navFontResponsive}`,
-                `${navFontResponsive}`,
-                `${navFontResponsive}`,
-                `${navFont}`,
-                `${navFont}`,
-              ]}
-              color={pathName === '/service-programs' ? '#fff' : '#fff'}
-              transition='all 0.4s'
-              as={Link}
-              href='/service-programs'
-              fontWeight={isPathPrograms}
-              _after={{ transform: isPathProgramsScaleX }}
+            <div
+              className={`effect-three-header${
+                pathName === '/service-programs' ? '-active' : ''
+              }`}
             >
-              บริการของเรา
-            </Text>
-            <Text
-              className='textcss-header'
-              fontSize={[
-                `${navFontResponsive}`,
-                `${navFontResponsive}`,
-                `${navFontResponsive}`,
-                `${navFontResponsive}`,
-                `${navFont}`,
-                `${navFont}`,
-              ]}
-              color={pathName === '/contact-us' ? '#fff' : '#fff'}
-              transition='all 0.4s'
-              fontWeight={isPathContact}
-              as={Link}
-              href='/contact-us'
-              _after={{ transform: isPathContactScaleX }}
+              <Text
+                fontSize={[
+                  `${navFontResponsive}`,
+                  `${navFontResponsive}`,
+                  `${navFontResponsive}`,
+                  `${navFontResponsive}`,
+                  `${navFont}`,
+                  `${navFont}`,
+                ]}
+                color={pathName === '/service-programs' ? '#fff' : '#fff'}
+                transition='all 0.4s'
+                as={Link}
+                href='/service-programs'
+                fontWeight={isPathPrograms}
+                _after={{ transform: isPathProgramsScaleX }}
+              >
+                บริการของเรา
+              </Text>
+            </div>
+            <div
+              className={`effect-three-header${
+                pathName === '/contact-us' ? '-active' : ''
+              }`}
             >
-              ติดต่อเรา
-            </Text>
+              <Text
+                fontSize={[
+                  `${navFontResponsive}`,
+                  `${navFontResponsive}`,
+                  `${navFontResponsive}`,
+                  `${navFontResponsive}`,
+                  `${navFont}`,
+                  `${navFont}`,
+                ]}
+                color={pathName === '/contact-us' ? '#fff' : '#fff'}
+                transition='all 0.4s'
+                fontWeight={isPathContact}
+                as={Link}
+                href='/contact-us'
+                _after={{ transform: isPathContactScaleX }}
+              >
+                ติดต่อเรา
+              </Text>
+            </div>
           </HStack>
         </Center>
       </nav>
