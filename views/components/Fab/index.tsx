@@ -44,7 +44,7 @@ const FabButton = () => (
       style={{
         backgroundColor: '#3b5998',
       }}
-      onClick={() => window.open(`https://m.me/Thefreshyclinic.cnx/`, '_blank')}
+      onClick={() => window.open(`https://m.me/Thefreshyclinic.cr/`, '_blank')}
     >
       <FaFacebookMessenger
         color='white'
@@ -56,7 +56,7 @@ const FabButton = () => (
       style={{
         backgroundColor: '#1DAA39',
       }}
-      onClick={() => window.open(`https://lin.ee/Tdrn4pv`, '_blank')}
+      onClick={() => window.open(`https://lin.ee/K3Oc2SB`, '_blank')}
     >
       <FaLine
         color='white'

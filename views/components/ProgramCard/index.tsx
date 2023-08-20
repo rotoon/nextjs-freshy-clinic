@@ -11,6 +11,9 @@ const ProgramCard = ({ program }: { program: TProgram }) => {
       cursor='pointer'
       spacing={4}
       className='grow'
+      onClick={() =>
+        window.open('https://www.facebook.com/Thefreshyclinic.cnx/')
+      }
     >
       <Image
         style={{

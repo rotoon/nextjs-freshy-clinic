@@ -16,6 +16,7 @@ nav {
   display: inline-block;
   margin: 0;
   text-transform: uppercase;
+  border-bottom: 1px solid #fff !important;
 }
 .textcss-header:after {
   display: block;
@@ -34,31 +35,6 @@ nav {
   transform-origin: 100% 50%;
 }
 .textcss-header.fromLeft:after {
-  transform-origin: 0% 50%;
-}
-
-.textcss {
-  display: inline-block;
-  margin: 0;
-  text-transform: uppercase;
-}
-.textcss:after {
-  display: block;
-  content: '';
-  border-bottom: 2px solid #b06dff !important;
-  /* transform: ; */
-  transition: transform 250ms ease-in-out;
-}
-.textcss:active {
-  background: transparent;
-}
-.textcss:hover:after {
-  transform: scaleX(1);
-}
-.textcss.fromRight:after {
-  transform-origin: 100% 50%;
-}
-.textcss.fromLeft:after {
   transform-origin: 0% 50%;
 }
 
