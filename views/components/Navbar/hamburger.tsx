@@ -27,12 +27,16 @@ function Hamburger({}: Props) {
   const pathName = usePathname()
   const isPathHome = pathName === '/' ? 'scaleX(1)' : 'scaleX(0)'
   const isPathHomebg = pathName === '/' ? '#e9e9e9' : 'transparent'
-  const isPathTour = pathName.includes('tour') ? 'scaleX(1)' : 'scaleX(0)'
-  const isPathTourbg = pathName.includes('tour') ? '#e9e9e9' : 'transparent'
-  const isPathAbout = pathName === '/about' ? 'scaleX(1)' : 'scaleX(0)'
-  const isPathAboutbg = pathName === '/about' ? '#e9e9e9' : 'transparent'
-  const isPathContact = pathName === '/contact' ? 'scaleX(1)' : 'scaleX(0)'
-  const isPathContactbg = pathName === '/contact' ? '#e9e9e9' : 'transparent'
+  const isPathAbout = pathName.includes('about-us') ? 'scaleX(1)' : 'scaleX(0)'
+  const isPathAboutbg = pathName.includes('about-us')
+    ? '#e9e9e9'
+    : 'transparent'
+  const isPathService =
+    pathName === '/service-programs' ? 'scaleX(1)' : 'scaleX(0)'
+  const isPathServicebg =
+    pathName === '/service-programs' ? '#e9e9e9' : 'transparent'
+  const isPathContact = pathName === '/contact-us' ? 'scaleX(1)' : 'scaleX(0)'
+  const isPathContactbg = pathName === '/contact-us' ? '#e9e9e9' : 'transparent'
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const listenScrollEvent = () => {
@@ -169,7 +173,7 @@ function Hamburger({}: Props) {
                 <Center
                   as={Link}
                   href='/about-us'
-                  bg={isPathTourbg}
+                  bg={isPathAboutbg}
                   px='0rem'
                   w='100%'
                   transition='all 0.3s'
@@ -187,7 +191,7 @@ function Hamburger({}: Props) {
                     textAlign='center'
                     className='fromCenter textcss'
                     _focus={{ border: '1px solid transparent' }}
-                    _after={{ transform: isPathTour }}
+                    _after={{ transform: isPathAbout }}
                     onClick={() => onClose()}
                     color={pathName.includes('tour') ? '#4b4b4b' : '#000'}
                   >
@@ -196,8 +200,8 @@ function Hamburger({}: Props) {
                 </Center>
                 <Center
                   as={Link}
-                  href='/about-us'
-                  bg={isPathAboutbg}
+                  href='/service-programs'
+                  bg={isPathServicebg}
                   px='0rem'
                   w='100%'
                   transition='all 0.3s'
@@ -208,23 +212,27 @@ function Hamburger({}: Props) {
                 >
                   <Text
                     fontSize='16px'
-                    fontWeight={pathName === '/about-us' ? 'bold' : 'normal'}
+                    fontWeight={
+                      pathName === '/service-programs' ? 'bold' : 'normal'
+                    }
                     py='1.75rem'
                     w='max-content'
                     border='1px solid transparent'
                     textAlign='center'
                     className='fromCenter textcss'
                     _focus={{ border: '1px solid transparent' }}
-                    _after={{ transform: isPathAbout }}
+                    _after={{ transform: isPathService }}
                     onClick={() => onClose()}
-                    color={pathName === '/about-us' ? '#4b4b4b' : '#000'}
+                    color={
+                      pathName === '/service-programs' ? '#4b4b4b' : '#000'
+                    }
                   >
                     บริการของเรา
                   </Text>
                 </Center>
                 <Center
                   as={Link}
-                  href='/contact'
+                  href='/contact-us'
                   bg={isPathContactbg}
                   px='0rem'
                   w='100%'
@@ -236,7 +244,7 @@ function Hamburger({}: Props) {
                 >
                   <Text
                     fontSize='16px'
-                    fontWeight={pathName === '/contact' ? 'bold' : 'normal'}
+                    fontWeight={pathName === '/contact-us' ? 'bold' : 'normal'}
                     py='1.75rem'
                     w='max-content'
                     border='1px solid transparent'
@@ -245,7 +253,7 @@ function Hamburger({}: Props) {
                     _focus={{ border: '1px solid transparent' }}
                     _after={{ transform: isPathContact }}
                     onClick={() => onClose()}
-                    color={pathName === '/contact' ? '#4b4b4b' : '#000'}
+                    color={pathName === '/contact-us' ? '#4b4b4b' : '#000'}
                   >
                     ติดต่อเรา
                   </Text>

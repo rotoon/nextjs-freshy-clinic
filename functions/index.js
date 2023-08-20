@@ -77,7 +77,10 @@ exports.programs = functions.region('asia-southeast1').https.onRequest(
 
         response.status(200).send({
           total: programCount.data().count,
-          list: programs,
+          list:
+            request.params['0'] === 'recommend'
+              ? programs.filter((p) => p.isRecommend)
+              : programs,
         })
       } else {
         response.status(405).send('Method not allowed')

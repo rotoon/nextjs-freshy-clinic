@@ -19,17 +19,18 @@ function Header({}: Props) {
   const isPathHome = pathName === '/' ? 'bold' : 'normal'
   const isPathHomeScaleX = pathName === '/' ? 'scaleX(1)' : 'scaleX(0)'
 
-  const isPathTour = pathName.includes('/about-us') ? 'bold' : 'normal'
-  const isPathTourScaleX = pathName.includes('/about-us')
+  const isPathAbout = pathName.includes('/about-us') ? 'bold' : 'normal'
+  const isPathAboutScaleX = pathName.includes('/about-us')
     ? 'scaleX(1)'
     : 'scaleX(0)'
 
-  const isPathAbout = pathName === '/about' ? 'bold' : 'normal'
-  const isPathAboutScaleX = pathName === '/about' ? 'scaleX(1)' : 'scaleX(0)'
+  const isPathPrograms = pathName === '/service-programs' ? 'bold' : 'normal'
+  const isPathProgramsScaleX =
+    pathName === '/service-programs' ? 'scaleX(1)' : 'scaleX(0)'
 
-  const isPathContact = pathName === '/contact' ? 'bold' : 'normal'
+  const isPathContact = pathName === '/contact-us' ? 'bold' : 'normal'
   const isPathContactScaleX =
-    pathName === '/contact' ? 'scaleX(1)' : 'scaleX(0)'
+    pathName === '/contact-us' ? 'scaleX(1)' : 'scaleX(0)'
 
   const [navSize, setnavSize] = useState<String>('5.5rem')
   const [navColor, setnavColor] = useState<String>('#b06dff')
@@ -154,7 +155,7 @@ function Header({}: Props) {
             w='100%'
           >
             <Text
-              className='textcss'
+              className='textcss-header'
               fontSize={[
                 `${navFontResponsive}`,
                 `${navFontResponsive}`,
@@ -174,7 +175,7 @@ function Header({}: Props) {
             </Text>
 
             <Text
-              className='textcss'
+              className='textcss-header'
               fontSize={[
                 `${navFontResponsive}`,
                 `${navFontResponsive}`,
@@ -186,8 +187,8 @@ function Header({}: Props) {
               transition='all 0.4s'
               as={Link}
               href='/about-us'
-              fontWeight={isPathTour}
-              _after={{ transform: isPathTourScaleX }}
+              fontWeight={isPathAbout}
+              _after={{ transform: isPathAboutScaleX }}
               color={pathName === '/about-us' ? '#fff' : '#fff'}
             >
               เกี่ยวกับเรา
@@ -208,7 +209,7 @@ function Header({}: Props) {
               />
             </HStack>
             <Text
-              className='textcss'
+              className='textcss-header'
               fontSize={[
                 `${navFontResponsive}`,
                 `${navFontResponsive}`,
@@ -217,17 +218,17 @@ function Header({}: Props) {
                 `${navFont}`,
                 `${navFont}`,
               ]}
-              color={pathName === '/about' ? '#fff' : '#fff'}
+              color={pathName === '/service-programs' ? '#fff' : '#fff'}
               transition='all 0.4s'
               as={Link}
-              href='/about-us'
-              fontWeight={isPathAbout}
-              _after={{ transform: isPathAboutScaleX }}
+              href='/service-programs'
+              fontWeight={isPathPrograms}
+              _after={{ transform: isPathProgramsScaleX }}
             >
               บริการของเรา
             </Text>
             <Text
-              className='textcss'
+              className='textcss-header'
               fontSize={[
                 `${navFontResponsive}`,
                 `${navFontResponsive}`,
@@ -236,11 +237,11 @@ function Header({}: Props) {
                 `${navFont}`,
                 `${navFont}`,
               ]}
-              color={pathName === '/contact' ? '#fff' : '#fff'}
+              color={pathName === '/contact-us' ? '#fff' : '#fff'}
               transition='all 0.4s'
               fontWeight={isPathContact}
               as={Link}
-              href='/contact'
+              href='/contact-us'
               _after={{ transform: isPathContactScaleX }}
             >
               ติดต่อเรา

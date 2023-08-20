@@ -24,6 +24,19 @@ export const programsCollection = buildCollection<Program>({
     delete: true,
   }),
   properties: {
+    image: buildProperty({
+      name: 'Image',
+      dataType: 'string',
+      storage: {
+        storagePath: 'programs',
+        storeUrl: true,
+        acceptedFiles: ['image/*'],
+        metadata: {
+          cacheControl: 'max-age=1000000',
+        },
+      },
+      validation: { required: true },
+    }),
     title: {
       name: 'Title',
       dataType: 'string',
@@ -43,19 +56,7 @@ export const programsCollection = buildCollection<Program>({
       validation: { required: true },
       dataType: 'boolean',
     }),
-    image: buildProperty({
-      name: 'Image',
-      dataType: 'string',
-      storage: {
-        storagePath: 'programs',
-        storeUrl: true,
-        acceptedFiles: ['image/*'],
-        metadata: {
-          cacheControl: 'max-age=1000000',
-        },
-      },
-      validation: { required: true },
-    }),
+
     createdAt: buildProperty({
       name: 'Created on',
       dataType: 'date',
