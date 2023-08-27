@@ -1,31 +1,89 @@
 import { TProgram } from '@/app/page'
-import { Stack, Heading, Text } from '@chakra-ui/react'
+import {
+  Stack,
+  Heading,
+  Text,
+  Box,
+  Button,
+  HStack,
+  VStack,
+} from '@chakra-ui/react'
 import Image from 'next/image'
+import './style.css'
+import { FaFacebookSquare } from 'react-icons/fa'
 
 const ProgramCard = ({ program }: { program: TProgram }) => {
   return (
-    <Stack
+    <Box
       key={program.title}
-      justifyContent='center'
-      alignItems='center'
       cursor='pointer'
-      spacing={4}
-      className='grow'
-      onClick={() =>
-        window.open('https://www.facebook.com/Thefreshyclinic.cnx/')
-      }
     >
-      <Image
-        style={{
-          borderRadius: 10,
-        }}
-        alt='hifu'
-        src={program.image}
-        height={350}
-        width={350}
-        priority
-      />
-      <Stack spacing={0}>
+      <Stack
+        justifyContent='center'
+        alignItems='center'
+        spacing={4}
+        className='card'
+      >
+        <Image
+          alt='hifu'
+          src={program.image}
+          height={350}
+          width={350}
+          priority
+        />
+        <VStack spacing={12}>
+          <Stack
+            className='info'
+            justifyContent='center'
+            alignItems='center'
+            spacing={4}
+          >
+            <Heading
+              fontFamily='LINESeedSansTH-Rg'
+              textAlign='center'
+              as='h1'
+              size='md'
+            >
+              สาขาเชียงใหม่
+            </Heading>
+            <Button
+              onClick={() =>
+                window.open('https://www.facebook.com/Thefreshyclinic.cnx/')
+              }
+              leftIcon={<FaFacebookSquare size={20} />}
+            >
+              Facebook
+            </Button>
+          </Stack>
+          <Stack
+            className='info'
+            justifyContent='center'
+            alignItems='center'
+            spacing={4}
+          >
+            <Heading
+              fontFamily='LINESeedSansTH-Rg'
+              textAlign='center'
+              as='h1'
+              size='md'
+            >
+              สาขาเชียงราย
+            </Heading>
+            <Button
+              onClick={() =>
+                window.open('https://www.facebook.com/Thefreshyclinic.cr/')
+              }
+              leftIcon={<FaFacebookSquare size={20} />}
+            >
+              Facebook
+            </Button>
+          </Stack>
+        </VStack>
+      </Stack>
+      <Stack
+        spacing={0}
+        mt={4}
+      >
         <Heading
           fontFamily='LINESeedSansTH-Rg'
           size='md'
@@ -42,7 +100,7 @@ const ProgramCard = ({ program }: { program: TProgram }) => {
           {program.desc}
         </Text>
       </Stack>
-    </Stack>
+    </Box>
   )
 }
 
