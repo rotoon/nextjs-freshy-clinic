@@ -14,10 +14,7 @@ import { FaFacebookSquare } from 'react-icons/fa'
 
 const ProgramCard = ({ program }: { program: TProgram }) => {
   return (
-    <Box
-      key={program.title}
-      cursor='pointer'
-    >
+    <Box key={program.title}>
       <Stack
         justifyContent='center'
         alignItems='center'
@@ -48,7 +45,7 @@ const ProgramCard = ({ program }: { program: TProgram }) => {
             </Heading>
             <Button
               onClick={() =>
-                window.open('https://www.facebook.com/Thefreshyclinic.cnx/')
+                window.open(`https://m.me/Thefreshyclinic.cnx/`, '_blank')
               }
               leftIcon={<FaFacebookSquare size={20} />}
             >
@@ -71,7 +68,7 @@ const ProgramCard = ({ program }: { program: TProgram }) => {
             </Heading>
             <Button
               onClick={() =>
-                window.open('https://www.facebook.com/Thefreshyclinic.cr/')
+                window.open(`https://m.me/Thefreshyclinic.cr/`, '_blank')
               }
               leftIcon={<FaFacebookSquare size={20} />}
             >
