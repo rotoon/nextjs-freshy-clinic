@@ -38,8 +38,8 @@ const SectionThree = ({ programs }: { programs: TProgram[] }) => {
           'repeat(3, minmax(200px, 1fr))',
           'repeat(3, minmax(200px, 1fr))',
         ]}
-        justifyContent='flex-start'
-        alignItems='flex-start'
+        justifyContent='center'
+        alignItems='center'
       >
         {programs.map((program) => (
           <ProgramCard

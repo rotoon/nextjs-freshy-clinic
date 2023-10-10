@@ -14,7 +14,13 @@ import { FaFacebookSquare } from 'react-icons/fa'
 
 const ProgramCard = ({ program }: { program: TProgram }) => {
   return (
-    <Box key={program.title}>
+    <Box
+      key={program.title}
+      display='flex'
+      flexDirection='column'
+      justifyContent='center'
+      alignItems='center'
+    >
       <Stack
         justifyContent='center'
         alignItems='center'
