@@ -36,7 +36,7 @@ export default function RootLayout({
           data-n-head='ssr'
           property='og:url'
           name='og:url'
-          content='https://https://thefreshyclinic.com/'
+          content='https://thefreshyclinic.com/'
         />
         <meta
           data-n-head='ssr'
