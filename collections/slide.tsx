@@ -1,4 +1,4 @@
-import { buildCollection, buildProperty } from 'firecms'
+import { buildCollection, buildProperty } from '@firecms/core'
 
 export type Slide = {
   order: number
@@ -9,6 +9,7 @@ export type Slide = {
 }
 
 export const slidesCollection = buildCollection<Slide>({
+  id: 'slides',
   name: 'Slides',
   singularName: 'Slides',
   path: 'slides',

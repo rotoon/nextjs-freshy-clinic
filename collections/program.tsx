@@ -1,4 +1,4 @@
-import { buildCollection, buildProperty } from 'firecms'
+import { buildCollection, buildProperty } from '@firecms/core'
 
 export type Program = {
   title: string
@@ -11,6 +11,7 @@ export type Program = {
 }
 
 export const programsCollection = buildCollection<Program>({
+  id: 'Programs',
   name: 'Programs',
   singularName: 'Programs',
   path: 'Programs',

@@ -2,6 +2,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Use Node.js 20.9 or newer. The admin uses FireCMS 3.5.1 with Firebase 12 and React 18.3. Keep the `@firecms/*` packages on the same version.
+
+Install dependencies with `npm ci`. Before releasing, run `npm run lint`, `npm test`, and `npm run build`; Next.js 16 does not run ESLint during builds. Run the production build locally with `npm run start`.
+
+The home and service-programs pages use 60-second ISR caching. After that interval, the next visit receives the cached page while Next.js refreshes it in the background. CMS edits appear after that refresh succeeds; this is not an automatic refresh every minute. Check cache behavior with `npm run build` and `npm run start`, since development mode behaves differently.
+
 First, run the development server:
 
 ```bash

@@ -1,0 +1,19 @@
+@import 'tailwindcss' source(none);
+@import '@firecms/ui/index.css' layer(base);
+
+@source '../../node_modules/@firecms';
+@source './CMS.tsx';
+@plugin '@tailwindcss/typography';
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --color-primary: #b06dff;
+  --color-secondary: #ff9900;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-surface-50);
+  font-family: var(--font-sans);
+}

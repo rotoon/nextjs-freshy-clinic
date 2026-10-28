@@ -32,8 +32,8 @@ exports.slide = functions.region('asia-southeast1').https.onRequest(
             slidesSnap.docs.map((doc) => ({
               id: doc.id,
               ...doc.data(),
-              createdAt: doc.data()?.updatedAt.toDate() || '',
-              updatedAt: doc.data()?.updatedAt.toDate() || '',
+              createdAt: doc.data()?.createdAt?.toDate() || '',
+              updatedAt: doc.data()?.updatedAt?.toDate() || '',
             }))) ||
           []
 
@@ -70,8 +70,8 @@ exports.programs = functions.region('asia-southeast1').https.onRequest(
             programsSnap.docs.map((doc) => ({
               id: doc.id,
               ...doc.data(),
-              createdAt: doc.data()?.updatedAt.toDate() || '',
-              updatedAt: doc.data()?.updatedAt.toDate() || '',
+              createdAt: doc.data()?.createdAt?.toDate() || '',
+              updatedAt: doc.data()?.updatedAt?.toDate() || '',
             }))) ||
           []
 
