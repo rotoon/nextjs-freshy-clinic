@@ -35,13 +35,17 @@ export default function Programs({ programs }: ProgramsComponentProps) {
             </Heading>
             <Heading
               fontFamily='LINESeedSansTH-Rg'
-              as='h5'
+              as='p'
               fontSize={[14, 16, 18, 18, 18, 18]}
               textAlign='center'
               color='gray'
             >
               เสริมความงามโดยทีมแพทย์และบุคลากรทางการแพทย์ผู้เชียวชาญจากเดอะเฟรชชี่คลินิก
             </Heading>
+            <Text fontFamily='LINESeedSansTH-Rg' textAlign='center'>
+              ดูรายการบริการของ The Freshy Clinic สาขาเชียงใหม่และเชียงรายด้านล่าง
+              ติดต่อสาขาที่สะดวกเพื่อสอบถามรายละเอียด ราคา และคิวเข้ารับบริการ
+            </Text>
           </Stack>
           <SimpleGrid
             spacing={10}
@@ -58,7 +62,7 @@ export default function Programs({ programs }: ProgramsComponentProps) {
             {programs?.list.map((program) => (
               <ProgramCard
                 program={program}
-                key={program.title}
+                key={program.id}
               />
             ))}
           </SimpleGrid>

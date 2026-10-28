@@ -9,6 +9,7 @@ import {
   Center,
 } from '@chakra-ui/react'
 import Image from 'next/image'
+import { branches } from '@/lib/site'
 
 export default function About() {
   return (
@@ -34,7 +35,7 @@ export default function About() {
             </Heading>
             <Heading
               fontFamily='LINESeedSansTH-Rg'
-              as='h5'
+              as='p'
               fontSize={[14, 16, 18, 18, 18, 18]}
               textAlign='center'
               color='gray'
@@ -56,7 +57,7 @@ export default function About() {
             </Text>
             <Center>
               <Image
-                alt='about-us'
+                alt='The Freshy Clinic คลินิกเสริมความงาม'
                 src='/images/about/1.jpg'
                 width={800}
                 height={450}
@@ -80,7 +81,7 @@ export default function About() {
             </Text>
             <Center>
               <Image
-                alt='about-us1'
+                alt='บรรยากาศและการให้บริการของ The Freshy Clinic'
                 src='/images/about/2.jpg'
                 width={800}
                 height={600}
@@ -106,11 +107,13 @@ export default function About() {
           <Center>
             <VStack color='#B06DFF'>
               <Heading
+                as='p'
                 fontFamily='LINESeedSansTH-Rg'
                 textAlign='center'
                 fontSize={[18, 20, 22, 24, 26, 28]}
               >{`ให้คุณ 'พึงพอใจ' กับทุกความสวย`}</Heading>
               <Heading
+                as='p'
                 textAlign='center'
                 fontFamily='LINESeedSansTH-Rg'
                 fontSize={[18, 20, 22, 24, 26, 28]}
@@ -126,13 +129,14 @@ export default function About() {
               fontFamily='LINESeedSansTH-Rg'
               textAlign='center'
             >
-              The Freshy Clinic ปัจจุบันเปิดให้บริการเสริมความมาแล้ว 5 ปี
-              โดยมีสาขาเชียงใหม่และสาขาเชียงราย
-              คุณจึงมั่นใจได้กับการบริการของเรา
+              The Freshy Clinic มีสาขาเชียงใหม่และสาขาเชียงราย
+            </Heading>
+            <Heading as='h3' size='sm' fontFamily='LINESeedSansTH-Rg'>
+              {branches[0].name}
             </Heading>
             <Center>
               <Image
-                alt='map-cm'
+                alt='แผนที่และที่ตั้ง The Freshy Clinic สาขาเชียงใหม่'
                 src='/images/about/cm.jpg'
                 width={800}
                 height={600}
@@ -145,16 +149,16 @@ export default function About() {
                 fontSize={[14, 16, 18, 18, 18, 18]}
                 textAlign='center'
               >
-                สาขาเชียงใหม่ ตั้งอยู่ โครงการใหม่ หลัง ม.ราชภัฎเชียงใหม่
-                อำเภอเมืองเชียงใหม่ จังหวัดเชียงใหม่ เปิดให้บริการทุกวัน
-                ตั้งแต่เวลา 12.00 น. - 20.00 น.
-                โดยมีพนักงานคอยต้อนรับและดูแลตลอดเวลา
+                {branches[0].name} ตั้งอยู่ {branches[0].address} เปิดให้บริการทุกวัน
+                เวลา {branches[0].opens}–{branches[0].closes} น.
               </Text>
             </Center>
-
+            <Heading as='h3' size='sm' fontFamily='LINESeedSansTH-Rg'>
+              {branches[1].name}
+            </Heading>
             <Center>
               <Image
-                alt='map-cm'
+                alt='แผนที่และที่ตั้ง The Freshy Clinic สาขาเชียงราย'
                 src='/images/about/cr.jpg'
                 width={800}
                 height={600}
@@ -167,10 +171,8 @@ export default function About() {
                 fontSize={[14, 16, 18, 18, 18, 18]}
                 textAlign='center'
               >
-                สาขาเชียงราย ตั้งอยู่ ทางเข้าตลาดล้านเมือง ประมาณ 200 เมตร
-                จังหวัดเชียงราย เปิดให้บริการทักวัน ตั้งแต่เวลา 11.00 น. - 20.00
-                น. โดยมีพนักงานคอยดูแลและต้อนรับตลอดเวลา
-                โดยมีพนักงานคอยต้อนรับและดูแลตลอดเวลา
+                {branches[1].name} ตั้งอยู่ {branches[1].address} เปิดให้บริการทุกวัน
+                เวลา {branches[1].opens}–{branches[1].closes} น.
               </Text>
             </Center>
           </Stack>

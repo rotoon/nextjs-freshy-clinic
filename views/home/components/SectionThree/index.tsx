@@ -12,7 +12,7 @@ const SectionThree = ({ programs }: { programs: TProgram[] }) => {
     >
       <Stack spacing={4}>
         <Heading
-          as='h1'
+          as='h2'
           fontSize={[28, 28, 28, 28, 28, 30]}
           fontFamily='LINESeedSansTH-Rg'
           textAlign='center'
@@ -21,7 +21,7 @@ const SectionThree = ({ programs }: { programs: TProgram[] }) => {
         </Heading>
         <Heading
           fontFamily='LINESeedSansTH-Rg'
-          as='h5'
+          as='p'
           fontSize={[14, 16, 18, 18, 18, 18]}
           textAlign='center'
           color='gray'
@@ -43,8 +43,9 @@ const SectionThree = ({ programs }: { programs: TProgram[] }) => {
       >
         {programs.map((program) => (
           <ProgramCard
-            key={program.title}
+            key={program.id}
             program={program}
+            headingLevel='h3'
           />
         ))}
       </SimpleGrid>

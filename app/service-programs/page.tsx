@@ -1,5 +1,9 @@
 import ProgramsPage from '@/views/programs'
 import { TProgram } from '../page'
+import { pageMetadata, serviceCatalogStructuredData } from '@/lib/seo'
+import JsonLd from '@/views/components/JsonLd'
+
+export const metadata = pageMetadata('/service-programs')
 
 export interface ProgramsComponentProps {
   programs: {
@@ -29,6 +33,7 @@ export default async function Programs() {
 
   return (
     <main>
+      <JsonLd data={serviceCatalogStructuredData(programs.list)} />
       <ProgramsPage programs={programs} />
     </main>
   )

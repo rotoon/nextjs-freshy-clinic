@@ -4,6 +4,7 @@ import { FaEnvelope, FaFacebookSquare, FaLine } from 'react-icons/fa'
 import { ImLocation, ImPhone } from 'react-icons/im'
 import Link from 'next/link'
 import './footer.css'
+import { branches } from '@/lib/site'
 
 function FooterHome() {
   return (
@@ -39,7 +40,7 @@ function FooterHome() {
             spacing={{ base: '0.75rem', sm: '0.75rem', md: '0.75rem' }}
           >
             <Image
-              alt='logo'
+              alt='The Freshy Clinic'
               src='/logo.png'
               h='3rem'
               objectFit='cover'
@@ -55,7 +56,7 @@ function FooterHome() {
               โดยแพทย์ผู้เชี่ยวชาญด้านหัตการเสริมความงาม
               พร้อมให้คำปรึกษาแนะนำก่อนทำทุกเคสเพื่อให้ตรงตามความต้องการของลูกค้า
               ปัจจุบันทางคลินิกเปิดให้บริการ สาขาเชียงใหม่ และสาขาเชียงราย
-              เปิดให้บริการทุกวันตั้งแต่เวลา 11.00 - 20.00น.
+              {branches.map((branch) => ` ${branch.name}เปิดทุกวัน ${branch.opens}–${branch.closes} น.`).join(' ')}
               ให้คลินิกของเราได้ดูแลคุณนะคะ
             </Text>
           </VStack>
@@ -115,8 +116,7 @@ function FooterHome() {
                 lineHeight='20px'
                 fontFamily='LINESeedSansTH-Rg'
               >
-                76/2 ถ.หมื่นด้ามพร้าคต ต.ช้างเผือก อ.เมืองเชียงใหม่ จ.เชียงใหม่
-                50300
+                {branches[0].address}
               </Text>
             </HStack>
             <HStack>
@@ -126,9 +126,9 @@ function FooterHome() {
               <Text
                 as={Link}
                 target='_blank'
-                href='mailto:thefreshyclinic.cnx@gmail.com'
+                href={`mailto:${branches[0].email}`}
               >
-                thefreshyclinic.cnx@gmail.com
+                {branches[0].email}
               </Text>
             </HStack>
             <HStack alignItems='start'>
@@ -145,11 +145,11 @@ function FooterHome() {
                 <Text
                   mt={{ base: '0rem', sm: '-0.15rem', md: '-0.25rem' }}
                   style={{ fontWeight: 'bold' }}
-                  href='tel:0971963312'
+                  href={`tel:${branches[0].telephone}`}
                   target='_blank'
                   as={Link}
                 >
-                  097 196 3312
+                  {branches[0].displayTelephone}
                 </Text>
               </VStack>
             </HStack>
@@ -175,7 +175,7 @@ function FooterHome() {
                 lineHeight='20px'
                 fontFamily='LINESeedSansTH-Rg'
               >
-                66/42 ม.11 ต.สันทราย อ.เมืองเชียงราย จ.เชียงราย 57000
+                {branches[1].address}
               </Text>
             </HStack>
             <HStack>
@@ -185,9 +185,9 @@ function FooterHome() {
               <Text
                 as={Link}
                 target='_blank'
-                href='mailto:thefreshyclinic.cr@gmail.com'
+                href={`mailto:${branches[1].email}`}
               >
-                thefreshyclinic.cr@gmail.com
+                {branches[1].email}
               </Text>
             </HStack>
             <HStack alignItems='start'>
@@ -204,11 +204,11 @@ function FooterHome() {
                 <Text
                   mt={{ base: '0rem', sm: '-0.15rem', md: '-0.25rem' }}
                   style={{ fontWeight: 'bold' }}
-                  href='tel:0957943443'
+                  href={`tel:${branches[1].telephone}`}
                   target='_blank'
                   as={Link}
                 >
-                  095 794 3443
+                  {branches[1].displayTelephone}
                 </Text>
               </VStack>
             </HStack>

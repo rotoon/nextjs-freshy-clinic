@@ -12,11 +12,18 @@ import {
 import Image from 'next/image'
 import './style.css'
 import { FaFacebookSquare } from 'react-icons/fa'
+import { branches } from '@/lib/site'
+import { programLink } from '@/lib/program-links'
+import Link from 'next/link'
 
-const ProgramCard = ({ program }: { program: TProgram }) => {
+const ProgramCard = ({ program, headingLevel = 'h2' }: { program: TProgram; headingLevel?: 'h2' | 'h3' }) => {
+  const { anchor, path } = programLink(program.id)
   return (
     <Box
-      key={program.title}
+      as='article'
+      id={anchor}
+      aria-labelledby={`${anchor}-title`}
+      scrollMarginTop={{ base: '5rem', lg: '10rem' }}
       display='flex'
       flexDirection='column'
       justifyContent='center'
@@ -45,15 +52,17 @@ const ProgramCard = ({ program }: { program: TProgram }) => {
             <Heading
               fontFamily='LINESeedSansTH-Rg'
               textAlign='center'
-              as='h1'
+              as='p'
+              className='branch-label'
               size='md'
             >
               สาขาเชียงใหม่
             </Heading>
             <Button
-              onClick={() =>
-                window.open(`https://m.me/Thefreshyclinic.cnx/`, '_blank')
-              }
+              as='a'
+              href={branches[0].messenger}
+              target='_blank'
+              rel='noopener noreferrer'
               leftIcon={<FaFacebookSquare size={20} />}
             >
               Facebook
@@ -68,15 +77,17 @@ const ProgramCard = ({ program }: { program: TProgram }) => {
             <Heading
               fontFamily='LINESeedSansTH-Rg'
               textAlign='center'
-              as='h1'
+              as='p'
+              className='branch-label'
               size='md'
             >
               สาขาเชียงราย
             </Heading>
             <Button
-              onClick={() =>
-                window.open(`https://m.me/Thefreshyclinic.cr/`, '_blank')
-              }
+              as='a'
+              href={branches[1].messenger}
+              target='_blank'
+              rel='noopener noreferrer'
               leftIcon={<FaFacebookSquare size={20} />}
             >
               Facebook
@@ -89,11 +100,13 @@ const ProgramCard = ({ program }: { program: TProgram }) => {
         mt={4}
       >
         <Heading
+          as={headingLevel}
+          id={`${anchor}-title`}
           fontFamily='LINESeedSansTH-Rg'
           size='md'
           textAlign='center'
         >
-          {program.title}
+          <Link href={path}>{program.title}</Link>
         </Heading>
         <Text
           fontFamily='LINESeedSansTH-Rg'

@@ -12,6 +12,7 @@ export interface HomeComponentProps {
 }
 
 export type TProgram = {
+  id: string
   createdAt: string
   desc: string
   image: string
