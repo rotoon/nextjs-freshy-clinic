@@ -39,7 +39,9 @@ const SlideShow = ({ slides }: { slides: TSlide[] }) => {
                 <img
                   alt='slide image'
                   src={placeholder}
-                  style={{ width: '100%' }}
+                  width={3153}
+                  height={1330}
+                  style={{ width: '100%', height: 'auto', aspectRatio: '3153 / 1330', objectFit: 'contain' }}
                   fetchPriority={index === 0 ? 'high' : 'auto'}
                 />
               </picture>
@@ -63,7 +65,9 @@ const SlideShow = ({ slides }: { slides: TSlide[] }) => {
                 <img
                   alt='slide image'
                   src={placeholder}
-                  style={{ width: '100%' }}
+                  width={2048}
+                  height={2048}
+                  style={{ width: '100%', height: 'auto', aspectRatio: '1', objectFit: 'contain' }}
                   fetchPriority={index === 0 ? 'high' : 'auto'}
                 />
               </picture>

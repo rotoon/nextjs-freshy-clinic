@@ -60,6 +60,7 @@ export default function About() {
                 src='/images/about/1.jpg'
                 width={800}
                 height={450}
+                sizes='(max-width: 832px) calc(100vw - 32px), 800px'
               />
             </Center>
             <Text
@@ -82,7 +83,8 @@ export default function About() {
                 alt='about-us1'
                 src='/images/about/2.jpg'
                 width={800}
-                height={450}
+                height={600}
+                sizes='(max-width: 832px) calc(100vw - 32px), 800px'
               />
             </Center>
             <Text
@@ -133,7 +135,8 @@ export default function About() {
                 alt='map-cm'
                 src='/images/about/cm.jpg'
                 width={800}
-                height={450}
+                height={600}
+                sizes='(max-width: 832px) calc(100vw - 32px), 800px'
               />
             </Center>
             <Center>
@@ -154,7 +157,8 @@ export default function About() {
                 alt='map-cm'
                 src='/images/about/cr.jpg'
                 width={800}
-                height={450}
+                height={600}
+                sizes='(max-width: 832px) calc(100vw - 32px), 800px'
               />
             </Center>
             <Center>

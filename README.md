@@ -10,6 +10,8 @@ The home and service-programs pages cache their public API responses and rendere
 
 Slides and program images use the Next.js image optimizer with a minimum 30-day cache. New CMS uploads also receive 30-day Storage cache metadata; existing Storage objects are unchanged. Replacing an image must produce a new upload URL: invalidating page data does not purge optimized images for an unchanged URL. Responsive slide sources keep the hidden viewport's images from downloading, and program cards use lazy loading.
 
+Slides reserve a 3153:1330 desktop frame and a square mobile frame before images load. Uploads with other proportions fit inside the frame without cropping. Public clinic and about-page photos declare their rendered sizes so mobile screens request smaller image variants; their dimensions preserve the source aspect ratios.
+
 Existing program images have optimized WebP copies in `public/images/programs`, selected by their exact Firebase URL in `lib/program-images.ts`. The copies preserve aspect ratio and are at most 1200px in either dimension. They avoid downloading the old 6–7.4 MB originals on an image-cache miss. New CMS upload URLs automatically use the remote optimizer, so replacing an image through the CMS still works. Do not overwrite a Storage object while retaining its URL; use a new upload URL to replace an image.
 
 Public fonts retain their original families, with WOFF2 copies in `public/fonts/optimized`. The Thai and body fonts are preloaded in the root HTML. Content hashes in the filenames allow a one-year immutable cache; regenerate the filename hash and update the CSS/preload URLs when changing a font. Chakra uses the same body family during SSR and hydration to avoid switching from the system font after refresh.

@@ -44,6 +44,7 @@ export const slidesCollection = buildCollection<Slide>({
     }),
     image: buildProperty({
       name: 'Image',
+      description: 'Desktop ใช้กรอบประมาณ 2.37:1 และ Mobile ใช้กรอบ 1:1 รูปที่ต่างสัดส่วนจะแสดงเต็มภาพพร้อมพื้นที่ว่าง',
       dataType: 'string',
       storage: {
         storagePath: 'slides',

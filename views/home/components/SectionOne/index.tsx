@@ -36,6 +36,7 @@ const SectionOne = () => {
         src='/images/93203.jpg'
         width={600}
         height={450}
+        sizes='(max-width: 632px) calc(100vw - 32px), 600px'
         priority
       />
       <Stack>
