@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useState } from 'react'
+import { FormEvent, useState } from 'react'
 import {
   Alert,
   AlertTitle,
@@ -17,7 +17,6 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 export function CustomLoginView() {
   const auth = getAuth()
   const [isLoading, setLoading] = useState(false)
-  const [open, setOpen] = useState(false)
   const [error, setError] = useState<{
     title: string
     message: string
@@ -61,14 +60,6 @@ export function CustomLoginView() {
     })
   }
 
-  useEffect(() => {
-    if (error) {
-      setOpen(true)
-    } else {
-      setOpen(false)
-    }
-  }, [error])
-
   return (
     <Container
       component='main'
@@ -106,7 +97,7 @@ export function CustomLoginView() {
           noValidate
           sx={{ mt: 1 }}
         >
-          <Collapse in={open}>
+          <Collapse in={!!error}>
             <Alert
               severity='error'
               action={
@@ -115,7 +106,7 @@ export function CustomLoginView() {
                   color='inherit'
                   size='small'
                   onClick={() => {
-                    setOpen(false)
+                    setError(null)
                   }}
                 >
                   <CloseIcon fontSize='inherit' />

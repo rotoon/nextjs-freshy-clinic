@@ -1,3 +1,4 @@
+import { branches } from '@/lib/site'
 import { usePathname } from 'next/navigation'
 
 import { Box, Center, Flex, HStack, Image, Text } from '@chakra-ui/react'
@@ -56,19 +57,19 @@ function Header() {
             <Text>
               Tel :{' '}
               <a
-                href='tel:097 196 3312'
+                href={`tel:${branches[0].telephone}`}
                 target='_blank'
               >
-                097 196 3312
+                {branches[0].displayTelephone}
               </a>
             </Text>
             <Text>
               E-mail :{' '}
               <a
-                href='mailto:Thefreshyclinic.cnx@gmail.com'
+                href={`mailto:${branches[0].email}`}
                 target='_blank'
               >
-                Thefreshyclinic.cnx@gmail.com
+                {branches[0].email}
               </a>
             </Text>
             {/* <Text>T.A.T License : 21/01126</Text> */}
@@ -82,19 +83,19 @@ function Header() {
               <Text>
                 Tel :{' '}
                 <a
-                  href='tel:0957943443'
+                  href={`tel:${branches[1].telephone}`}
                   target='_blank'
                 >
-                  095 7943 443
+                  {branches[1].displayTelephone}
                 </a>
               </Text>
               <Text>
                 E-mail :{' '}
                 <a
-                  href='mailto:Thefreshyclinic.cr@gmail.com'
+                  href={`mailto:${branches[1].email}`}
                   target='_blank'
                 >
-                  Thefreshyclinic.cr@gmail.com
+                  {branches[1].email}
                 </a>
               </Text>
             </HStack>
@@ -188,7 +189,7 @@ function Header() {
                 w='auto'
                 objectFit='cover'
                 src='/logo.png'
-                alt='logo'
+                alt='The Freshy Clinic'
                 h={`${navImage}`}
                 borderRadius={10}
               />

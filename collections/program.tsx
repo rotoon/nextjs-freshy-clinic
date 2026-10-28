@@ -1,4 +1,5 @@
-import { buildCollection, buildProperty } from 'firecms'
+import { buildCollection, buildProperty } from '@firecms/core'
+import { refreshPublicContent } from './refresh-public-content'
 
 export type Program = {
   title: string
@@ -11,12 +12,17 @@ export type Program = {
 }
 
 export const programsCollection = buildCollection<Program>({
+  id: 'Programs',
   name: 'Programs',
   singularName: 'Programs',
   path: 'Programs',
   icon: 'Programshow',
   group: 'Content',
   defaultSize: 'xs',
+  callbacks: {
+    onSaveSuccess: refreshPublicContent,
+    onDelete: refreshPublicContent,
+  },
   permissions: () => ({
     read: true,
     edit: true,
@@ -32,7 +38,7 @@ export const programsCollection = buildCollection<Program>({
         storeUrl: true,
         acceptedFiles: ['image/*'],
         metadata: {
-          cacheControl: 'max-age=1000000',
+          cacheControl: 'public, max-age=2592000',
         },
       },
       validation: { required: true },

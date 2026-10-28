@@ -1,5 +1,4 @@
 import Home from '@/views/home'
-import { Timestamp } from 'firebase/firestore'
 
 export interface HomeComponentProps {
   slides: {
@@ -13,13 +12,14 @@ export interface HomeComponentProps {
 }
 
 export type TProgram = {
-  createdAt: Timestamp
+  id: string
+  createdAt: string
   desc: string
   image: string
   isRecommend: boolean
   order: number
   title: string
-  updatedAt: Timestamp
+  updatedAt: string
 }
 
 export type TSlide = {
@@ -35,10 +35,10 @@ async function getData() {
   const url =
     'https://asia-southeast1-nextjs-freshy-clinic.cloudfunctions.net/slide'
   const url2 =
-    'https://asia-southeast1-nextjs-freshy-clinic.cloudfunctions.net/programs/recomend'
+    'https://asia-southeast1-nextjs-freshy-clinic.cloudfunctions.net/programs/recommend'
   const [res, res2] = await Promise.all([
-    await fetch(url, { next: { revalidate: 0 } }),
-    await fetch(url2, { next: { revalidate: 0 } }),
+    fetch(url, { next: { revalidate: 86400, tags: ['public-content'] } }),
+    fetch(url2, { next: { revalidate: 86400, tags: ['public-content'] } }),
   ])
   if (res.status !== 200 || res2.status !== 200) {
     throw new Error('Failed to fetch data')

@@ -18,7 +18,7 @@ const SectionTwo = () => {
     >
       <Stack spacing={4}>
         <Heading
-          as='h1'
+          as='h2'
           fontSize={[28, 28, 28, 28, 28, 30]}
           fontFamily='LINESeedSansTH-Rg'
           textAlign='center'
@@ -27,7 +27,7 @@ const SectionTwo = () => {
         </Heading>
         <Heading
           fontFamily='LINESeedSansTH-Rg'
-          as='h5'
+          as='p'
           fontSize={[14, 16, 18, 18, 18, 18]}
           textAlign='center'
           color='gray'
@@ -54,6 +54,7 @@ const SectionTwo = () => {
             >
               <FaClinicMedical size={80} />
               <Heading
+                as='h3'
                 fontFamily='LINESeedSansTH-Rg'
                 textAlign='center'
                 size='md'
@@ -82,6 +83,7 @@ const SectionTwo = () => {
             >
               <GrCertificate size={80} />
               <Heading
+                as='h3'
                 fontFamily='LINESeedSansTH-Rg'
                 textAlign='center'
                 size='md'
@@ -110,6 +112,7 @@ const SectionTwo = () => {
             >
               <FaUserDoctor size={80} />
               <Heading
+                as='h3'
                 fontFamily='LINESeedSansTH-Rg'
                 textAlign='center'
                 size='md'
