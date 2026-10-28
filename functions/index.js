@@ -1,5 +1,5 @@
 const admin = require('firebase-admin')
-const functions = require('firebase-functions')
+const functions = require('firebase-functions/v1')
 const { setGlobalOptions } = require('firebase-functions/v2')
 setGlobalOptions({ maxInstances: 10 })
 

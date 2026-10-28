@@ -1,4 +1,5 @@
 import { buildCollection, buildProperty } from '@firecms/core'
+import { refreshPublicContent } from './refresh-public-content'
 
 export type Slide = {
   order: number
@@ -16,6 +17,10 @@ export const slidesCollection = buildCollection<Slide>({
   icon: 'Slideshow',
   group: 'Content',
   defaultSize: 'xs',
+  callbacks: {
+    onSaveSuccess: refreshPublicContent,
+    onDelete: refreshPublicContent,
+  },
   permissions: () => ({
     read: true,
     edit: true,
@@ -45,7 +50,7 @@ export const slidesCollection = buildCollection<Slide>({
         storeUrl: true,
         acceptedFiles: ['image/*'],
         metadata: {
-          cacheControl: 'max-age=1000000',
+          cacheControl: 'public, max-age=2592000',
         },
       },
       validation: { required: true },

@@ -22,6 +22,20 @@ export default function RootLayout({
       style={{ padding: '0px', overflowX: 'hidden' }}
     >
       <head>
+        <link
+          rel='preload'
+          href='/fonts/optimized/LINESeedSansTH_Rg.751ec524.woff2'
+          as='font'
+          type='font/woff2'
+          crossOrigin='anonymous'
+        />
+        <link
+          rel='preload'
+          href='/fonts/optimized/Urbanist-VariableFont_wght.36125906.woff2'
+          as='font'
+          type='font/woff2'
+          crossOrigin='anonymous'
+        />
         <meta
           data-n-head='ssr'
           charSet='UTF-8'

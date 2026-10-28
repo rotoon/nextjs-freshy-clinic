@@ -1,4 +1,5 @@
 import { TProgram } from '@/app/page'
+import { optimizedProgramImages } from '@/lib/program-images'
 import {
   Stack,
   Heading,
@@ -28,11 +29,11 @@ const ProgramCard = ({ program }: { program: TProgram }) => {
         className='card'
       >
         <Image
-          alt='hifu'
-          src={program.image}
+          alt={program.title}
+          src={optimizedProgramImages[program.image] ?? program.image}
           height={350}
           width={350}
-          priority
+          sizes='350px'
         />
         <VStack spacing={12}>
           <Stack

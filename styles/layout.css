@@ -4,36 +4,33 @@ body {
   overflow-x: hidden;
   padding: 0px !important;
   margin: 0px !important;
-  font-family: 'LINESeedSans-Rg';
-  font-family: 'LINESeedSansTH-Rg';
-  font-family: 'Oswald-VariableFont-wght';
   font-family: 'Urbanist-VariableFont-wght';
 }
 
 @font-face {
   font-family: 'LINESeedSans-Rg';
-  src: url('/fonts/LINESeedSans_Rg.otf');
+  src: url('/fonts/optimized/LINESeedSans_Rg.4e688840.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'LINESeedSansTH-Rg';
-  src: url('/fonts/LINESeedSansTH_Rg.otf');
+  src: url('/fonts/optimized/LINESeedSansTH_Rg.751ec524.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Oswald-VariableFont-wght';
-  src: url('/fonts/Oswald-VariableFont_wght.ttf');
+  src: url('/fonts/optimized/Oswald-VariableFont_wght.7235154c.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Urbanist-VariableFont-wght';
-  src: url('/fonts/Urbanist-VariableFont_wght.ttf');
+  src: url('/fonts/optimized/Urbanist-VariableFont_wght.36125906.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
 }

@@ -38,7 +38,7 @@ function loadFunctions(records = []) {
       initializeApp() {},
       firestore: () => ({ collection: () => query }),
     },
-    'firebase-functions': {
+    'firebase-functions/v1': {
       region: () => ({ https: { onRequest: (handler) => handler } }),
     },
     'firebase-functions/v2': { setGlobalOptions() {} },

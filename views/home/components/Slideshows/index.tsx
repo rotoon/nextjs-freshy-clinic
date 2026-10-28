@@ -1,6 +1,7 @@
 'use client'
 import { TSlide } from '@/app/page'
-import { Box, Image } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
+import { getImageProps } from 'next/image'
 import Slider from 'react-slick'
 
 const settings = {
@@ -14,6 +15,8 @@ const settings = {
   autoplaySpeed: 2500,
 }
 
+const placeholder = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
+
 const SlideShow = ({ slides }: { slides: TSlide[] }) => {
   const mobile = slides?.filter((slide) => slide.type === 'mobile') ?? []
   const desktop = slides?.filter((slide) => slide.type === 'desktop') ?? []
@@ -26,11 +29,20 @@ const SlideShow = ({ slides }: { slides: TSlide[] }) => {
         >
           <Slider {...settings}>
             {desktop?.map(({ image }, index) => (
-              <Image
-                alt='slide image'
-                src={image}
-                key={index}
-              />
+              <picture key={index}>
+                <source
+                  media='(min-width: 48em)'
+                  sizes='100vw'
+                  srcSet={getImageProps({ src: image, alt: 'slide image', fill: true, sizes: '100vw' }).props.srcSet}
+                />
+                {/* The hidden mobile/desktop slider uses an inline placeholder. */}
+                <img
+                  alt='slide image'
+                  src={placeholder}
+                  style={{ width: '100%' }}
+                  fetchPriority={index === 0 ? 'high' : 'auto'}
+                />
+              </picture>
             ))}
           </Slider>
         </Box>
@@ -42,11 +54,19 @@ const SlideShow = ({ slides }: { slides: TSlide[] }) => {
         >
           <Slider {...settings}>
             {mobile?.map(({ image }, index) => (
-              <Image
-                alt='slide image'
-                src={image}
-                key={index}
-              />
+              <picture key={index}>
+                <source
+                  media='(width < 48em)'
+                  sizes='100vw'
+                  srcSet={getImageProps({ src: image, alt: 'slide image', fill: true, sizes: '100vw' }).props.srcSet}
+                />
+                <img
+                  alt='slide image'
+                  src={placeholder}
+                  style={{ width: '100%' }}
+                  fetchPriority={index === 0 ? 'high' : 'auto'}
+                />
+              </picture>
             ))}
           </Slider>
         </Box>

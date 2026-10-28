@@ -12,7 +12,7 @@ async function getData() {
   const url2 =
     'https://asia-southeast1-nextjs-freshy-clinic.cloudfunctions.net/programs'
   const [res2] = await Promise.all([
-    await fetch(url2, { next: { revalidate: 60 } }),
+    await fetch(url2, { next: { revalidate: 86400, tags: ['public-content'] } }),
   ])
   if (res2.status !== 200) {
     throw new Error('Failed to fetch data')
