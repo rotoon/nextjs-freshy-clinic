@@ -52,6 +52,7 @@ export const clinicStructuredData = {
     email: branch.email,
     parentOrganization: { '@id': `${siteUrl}/#organization` },
     sameAs: [branch.facebook],
+    hasMap: branch.mapUrl,
     address: {
       '@type': 'PostalAddress',
       streetAddress: branch.streetAddress,
