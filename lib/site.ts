@@ -36,6 +36,9 @@ export const branches = [
     closes: '20:00',
     facebook: 'https://www.facebook.com/Thefreshyclinic.cnx/',
     messenger: 'https://m.me/Thefreshyclinic.cnx/',
+    mapUrl: 'https://maps.google.com/?cid=17100882395829170257',
+    mapEmbedUrl:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236.0528138583895!2d98.99278756955107!3d18.805058770832936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3b6dd375ac33%3A0xed5289ef4520f051!2sThe%20freshy%20clinic!5e0!3m2!1sth!2sth!4v1692517159677!5m2!1sth!2sth',
   },
   {
     id: 'chiang-rai',
@@ -52,6 +55,9 @@ export const branches = [
     closes: '20:00',
     facebook: 'https://www.facebook.com/Thefreshyclinic.cr/',
     messenger: 'https://m.me/Thefreshyclinic.cr/',
+    mapUrl: 'https://maps.google.com/?cid=4375480343602210868',
+    mapEmbedUrl:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4826.07267291714!2d99.8315903249222!3d19.867253072567436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d7099f0e9fba11%3A0x3cb8d430b21d2834!2zVGhlIGZhY2UgY2xpbmljIOC4qOC4ueC4meC4ouC5jOC4hOC4p-C4suC4oeC4h-C4suC4oeC4hOC4o-C4muC4p-C4h-C4iOC4o-C4quC4suC4guC4suC5gOC4iuC4teC4ouC4h-C4o-C4suC4og!5e0!3m2!1sth!2sth!4v1692517869474!5m2!1sth!2sth',
   },
 ] as const
 

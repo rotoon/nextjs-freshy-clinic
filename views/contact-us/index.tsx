@@ -9,12 +9,12 @@ import {
   Center,
   HStack,
   Link,
-  Box,
 } from '@chakra-ui/react'
 import Image from 'next/image'
 import { FaEnvelope } from 'react-icons/fa'
 import { ImLocation, ImPhone } from 'react-icons/im'
 import { branches, clinicQuestions } from '@/lib/site'
+import MapEmbed from './MapEmbed'
 
 export default function Contact() {
   return (
@@ -56,23 +56,11 @@ export default function Contact() {
                 justifyContent='space-between'
                 spacing={10}
               >
-                <Box
-                  boxShadow='rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'
-                  borderRadius='10px'
-                >
-                  <iframe
-                    title='แผนที่ The Freshy Clinic สาขาเชียงใหม่'
-                    src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236.0528138583895!2d98.99278756955107!3d18.805058770832936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3b6dd375ac33%3A0xed5289ef4520f051!2sThe%20freshy%20clinic!5e0!3m2!1sth!2sth!4v1692517159677!5m2!1sth!2sth'
-                    loading='lazy'
-                    width='100%'
-                    height='100%'
-                    style={{
-                      border: '0',
-                      overflow: 'hidden',
-                      borderRadius: '10px',
-                    }}
-                  ></iframe>
-                </Box>
+                <MapEmbed
+                  title='แผนที่ The Freshy Clinic สาขาเชียงใหม่'
+                  embedUrl={branches[0].mapEmbedUrl}
+                  mapUrl={branches[0].mapUrl}
+                />
                 <VStack
                   alignItems='flex-start'
                   w='100%'
@@ -138,23 +126,11 @@ export default function Contact() {
                 justifyContent='space-between'
                 spacing={10}
               >
-                <Box
-                  boxShadow='rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'
-                  borderRadius='10px'
-                >
-                  <iframe
-                    title='แผนที่ The Freshy Clinic สาขาเชียงราย'
-                    src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4826.07267291714!2d99.8315903249222!3d19.867253072567436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d7099f0e9fba11%3A0x3cb8d430b21d2834!2zVGhlIGZhY2UgY2xpbmljIOC4qOC4ueC4meC4ouC5jOC4hOC4p-C4suC4oeC4h-C4suC4oeC4hOC4o-C4muC4p-C4h-C4iOC4o-C4quC4suC4guC4suC5gOC4iuC4teC4ouC4h-C4o-C4suC4og!5e0!3m2!1sth!2sth!4v1692517869474!5m2!1sth!2sth'
-                    loading='lazy'
-                    width='100%'
-                    height='100%'
-                    style={{
-                      border: '0',
-                      overflow: 'hidden',
-                      borderRadius: '10px',
-                    }}
-                  ></iframe>
-                </Box>
+                <MapEmbed
+                  title='แผนที่ The Freshy Clinic สาขาเชียงราย'
+                  embedUrl={branches[1].mapEmbedUrl}
+                  mapUrl={branches[1].mapUrl}
+                />
                 <VStack
                   alignItems='flex-start'
                   w='100%'

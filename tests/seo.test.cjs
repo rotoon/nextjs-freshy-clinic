@@ -63,6 +63,7 @@ test('clinic schema keeps separate branch identities, addresses, phones, and con
     assert.equal(clinic.openingHoursSpecification.dayOfWeek.length, 7)
     assert.equal(clinic.openingHoursSpecification.closes, '20:00')
     assert.equal(clinic.parentOrganization['@id'], seo.websiteStructuredData['@graph'][0]['@id'])
+    assert.match(clinic.hasMap, /^https:\/\/maps\.google\.com\/\?cid=\d+$/)
     assert.ok(!('aggregateRating' in clinic))
   }
   assert.equal(clinics[0].openingHoursSpecification.opens, '12:00')
